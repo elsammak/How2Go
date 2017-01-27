@@ -5,10 +5,11 @@
 //  Created by Mohammed Elsammak on 1/27/17.
 //  Copyright © 2017 How2Go. All rights reserved.
 //
-
+/// Model class for stop object
 import Foundation
 struct Stop {
     
+    // Properties
     var lat: Double = 0.0
     var lon: Double = 0.0
     var dateTime: String = ""

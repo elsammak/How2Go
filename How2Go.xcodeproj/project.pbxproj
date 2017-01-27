@@ -23,6 +23,7 @@
 		A55C0B161E3B4B2F0092FD9C /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B151E3B4B2F0092FD9C /* Route.swift */; };
 		A55C0B1A1E3B4C120092FD9C /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B191E3B4C120092FD9C /* Segment.swift */; };
 		A55C0B1C1E3B4C2B0092FD9C /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B1B1E3B4C2B0092FD9C /* Stop.swift */; };
+		A55C0B1E1E3B862F0092FD9C /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B1D1E3B862F0092FD9C /* Properties.swift */; };
 		F86280533397F30487AB6543 /* Pods_How2GoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A1859970136CF799434307 /* Pods_How2GoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		A55C0B151E3B4B2F0092FD9C /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		A55C0B191E3B4C120092FD9C /* Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 		A55C0B1B1E3B4C2B0092FD9C /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		A55C0B1D1E3B862F0092FD9C /* Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		A8A1859970136CF799434307 /* Pods_How2GoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_How2GoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6992B48DA03214D9E8546F3 /* Pods-How2Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How2Go.debug.xcconfig"; path = "Pods/Target Support Files/Pods-How2Go/Pods-How2Go.debug.xcconfig"; sourceTree = "<group>"; };
 		D780E0DA655E2D54C0F49489 /* Pods_How2Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_How2Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +230,7 @@
 				A55C0B151E3B4B2F0092FD9C /* Route.swift */,
 				A55C0B191E3B4C120092FD9C /* Segment.swift */,
 				A55C0B1B1E3B4C2B0092FD9C /* Stop.swift */,
+				A55C0B1D1E3B862F0092FD9C /* Properties.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				A55C0B131E3B478B0092FD9C /* InteractorManager.swift in Sources */,
 				A55C0B1C1E3B4C2B0092FD9C /* Stop.swift in Sources */,
 				A55C0B161E3B4B2F0092FD9C /* Route.swift in Sources */,
+				A55C0B1E1E3B862F0092FD9C /* Properties.swift in Sources */,
 				A55C0B0C1E3B45B30092FD9C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

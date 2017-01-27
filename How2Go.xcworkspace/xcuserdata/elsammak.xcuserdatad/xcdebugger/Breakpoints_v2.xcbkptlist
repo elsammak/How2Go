@@ -79,33 +79,33 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "testExample()"
+            landmarkName = "testRoutesArray()"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "How2GoTests.How2GoTests.(testExample () -&gt; ()).(closure #1)"
+                  symbolName = "How2GoTests.How2GoTests.(testRoutesArray () -&gt; ()).(closure #1)"
                   moduleName = "How2GoTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/elsammak/Documents/How2Go/How2GoTests/How2GoTests.swift"
-                  timestampString = "507216324.87749"
+                  timestampString = "507220110.883978"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "26"
                   endingLineNumber = "26"
-                  offsetFromSymbolStart = "122">
+                  offsetFromSymbolStart = "120">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "How2GoTests.How2GoTests.(testExample () -&gt; ()).(closure #1).(implicit closure #1)"
+                  symbolName = "How2GoTests.How2GoTests.(testRoutesArray () -&gt; ()).(closure #1).(implicit closure #1)"
                   moduleName = "How2GoTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/elsammak/Documents/How2Go/How2GoTests/How2GoTests.swift"
-                  timestampString = "507216324.881366"
+                  timestampString = "507220110.88661"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "26"
@@ -127,7 +127,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "testExample()"
+            landmarkName = "testRoutesArray()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -143,18 +143,18 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "testExample()"
+            landmarkName = "testRoutesArray()"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "How2GoTests.How2GoTests.testExample () -&gt; ()"
+                  symbolName = "How2GoTests.How2GoTests.testRoutesArray () -&gt; ()"
                   moduleName = "How2GoTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/elsammak/Documents/How2Go/How2GoTests/How2GoTests.swift"
-                  timestampString = "507216324.891873"
+                  timestampString = "507220110.894703"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -165,18 +165,66 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "How2GoTests.How2GoTests.(testExample () -&gt; ()).(closure #1)"
+                  symbolName = "How2GoTests.How2GoTests.(testRoutesArray () -&gt; ()).(closure #1)"
                   moduleName = "How2GoTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/elsammak/Documents/How2Go/How2GoTests/How2GoTests.swift"
-                  timestampString = "507216324.895177"
+                  timestampString = "507220110.897285"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "26"
                   endingLineNumber = "26"
-                  offsetFromSymbolStart = "122">
+                  offsetFromSymbolStart = "120">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "How2Go/Model/Entity/Route.swift"
+            timestampString = "507220030.066782"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "createObject(fromData:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "How2Go/Model/Entity/Properties.swift"
+            timestampString = "507220120.350936"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "createObject(fromData:ofType:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "How2Go/Model/Entity/Properties.swift"
+            timestampString = "507220135.063206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "createObject(fromData:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

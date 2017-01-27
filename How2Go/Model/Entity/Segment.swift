@@ -5,7 +5,7 @@
 //  Created by Mohammed Elsammak on 1/27/17.
 //  Copyright © 2017 How2Go. All rights reserved.
 //
-
+/// Model class for Segment Object
 import Foundation
 
 enum TravelMode: Int {
@@ -21,6 +21,7 @@ enum TravelMode: Int {
 }
 struct Segment {
     
+    // Properties
     var name: String? = nil
     var numberOfStops: Float = 0.0
     var travelMode: TravelMode = .walking
@@ -30,6 +31,7 @@ struct Segment {
     var polyline: String? = nil
     var stops: [Stop] = []
     
+    // MARK:- Static methods
     static func createObject(fromData data: NSDictionary)-> Segment {
         
         var segment = Segment()
@@ -50,6 +52,7 @@ struct Segment {
     }
 }
 
+// Private helpers
 fileprivate func parseTravelMode(string: String)-> TravelMode {
     
     switch string {
