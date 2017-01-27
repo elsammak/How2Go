@@ -127,6 +127,10 @@
 		A55C0AD41E3B23E00092FD9C /* How2Go */ = {
 			isa = PBXGroup;
 			children = (
+				A55C0B031E3B26E30092FD9C /* Model */,
+				A55C0B041E3B26E30092FD9C /* Common */,
+				A55C0B051E3B26E30092FD9C /* View */,
+				A55C0B061E3B26E30092FD9C /* ViewModel */,
 				A55C0AD51E3B23E00092FD9C /* AppDelegate.swift */,
 				A55C0AD71E3B23E00092FD9C /* ViewController.swift */,
 				A55C0AD91E3B23E00092FD9C /* Main.storyboard */,
@@ -153,6 +157,34 @@
 				A55C0AF71E3B23E00092FD9C /* Info.plist */,
 			);
 			path = How2GoUITests;
+			sourceTree = "<group>";
+		};
+		A55C0B031E3B26E30092FD9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A55C0B041E3B26E30092FD9C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A55C0B051E3B26E30092FD9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A55C0B061E3B26E30092FD9C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E2866B86124BC672A24E3A8C /* Frameworks */ = {
