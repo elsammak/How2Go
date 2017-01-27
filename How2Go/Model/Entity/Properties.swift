@@ -5,7 +5,7 @@
 //  Created by Mohammed Elsammak on 1/27/17.
 //  Copyright © 2017 How2Go. All rights reserved.
 //
-
+/// Properties class, the only Class Model due to OOP requirements
 import Foundation
 enum RouteType {
     case none

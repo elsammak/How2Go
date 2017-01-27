@@ -6,7 +6,8 @@ target 'How2Go' do
   use_frameworks!
 
   # Pods for How2Go
-  pod 'Alamofire'  
+  pod 'Alamofire'
+  pod 'JTSplashView'
   
   target 'How2GoTests' do
     inherit! :search_paths

@@ -11,7 +11,7 @@ public struct Route {
    
     // Properties
     var type: RouteType = .none
-    var provider: String = ""
+    var provider: Provider? = Provider()
     var properties: Properties? = nil
     var segments: [Segment] = []
     var price: Price = Price()
@@ -19,9 +19,10 @@ public struct Route {
     // MARK- Static methods
     static func createObject(fromData data: NSDictionary)-> [Route] {
         
-        let values = data.value(forKey: "routes") as! [NSDictionary]
+        ProviderManager.sharedInstance.parseProvidersResponse(fromData: data.value(forKey: "provider_attributes") as! NSDictionary)
+        let routes = data.value(forKey: "routes") as! [NSDictionary]
         var routesArray: [Route] = []
-        for route in values {
+        for route in routes {
             routesArray.append(Route.createObject(fromData: (route)))
         }
         return routesArray
@@ -31,7 +32,7 @@ public struct Route {
         
         var route = Route()
         route.type = parseRouteType(type: data.value(forKey: "type") as! String)
-        route.provider = data.value(forKey: "provider") as! String
+        route.provider = ProviderManager.sharedInstance.getProvider(forProviderName: data.value(forKey: "provider") as! String)
         if let propertiesData = data.value(forKey: "properties") as? NSDictionary {
             route.properties = Properties.createObject(fromData: propertiesData, ofType: route.type)
         }
