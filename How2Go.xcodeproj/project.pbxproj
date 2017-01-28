@@ -30,10 +30,13 @@
 		A55C0B2A1E3C75620092FD9C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55C0B291E3C75620092FD9C /* MapKit.framework */; };
 		A55C0B2C1E3C761A0092FD9C /* RouteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */; };
 		A55C0B2E1E3C790F0092FD9C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B2D1E3C790F0092FD9C /* UIView+Extensions.swift */; };
-		A55C0B371E3C928C0092FD9C /* SegmentLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B351E3C928C0092FD9C /* SegmentLineViewController.swift */; };
-		A55C0B381E3C928C0092FD9C /* SegmentLineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55C0B361E3C928C0092FD9C /* SegmentLineViewController.xib */; };
-		A55C0B3B1E3C92AF0092FD9C /* StopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B391E3C92AF0092FD9C /* StopsViewController.swift */; };
-		A55C0B3C1E3C92AF0092FD9C /* StopsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55C0B3A1E3C92AF0092FD9C /* StopsViewController.xib */; };
+		A55C0B371E3C928C0092FD9C /* SegmentNodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B351E3C928C0092FD9C /* SegmentNodeViewController.swift */; };
+		A55C0B381E3C928C0092FD9C /* SegmentNodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55C0B361E3C928C0092FD9C /* SegmentNodeViewController.xib */; };
+		A55C0B3B1E3C92AF0092FD9C /* StopNodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B391E3C92AF0092FD9C /* StopNodeViewController.swift */; };
+		A55C0B3C1E3C92AF0092FD9C /* StopNodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55C0B3A1E3C92AF0092FD9C /* StopNodeViewController.xib */; };
+		A55C0B3F1E3C9AA50092FD9C /* SegmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B3D1E3C9AA50092FD9C /* SegmentsViewController.swift */; };
+		A55C0B431E3C9AB30092FD9C /* StopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B411E3C9AB30092FD9C /* StopsViewController.swift */; };
+		A55C0B481E3CAF840092FD9C /* UIWebView+VectorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B471E3CAF840092FD9C /* UIWebView+VectorDisplay.m */; };
 		F86280533397F30487AB6543 /* Pods_How2GoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A1859970136CF799434307 /* Pods_How2GoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,10 +91,14 @@
 		A55C0B291E3C75620092FD9C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDetailsViewController.swift; sourceTree = "<group>"; };
 		A55C0B2D1E3C790F0092FD9C /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		A55C0B351E3C928C0092FD9C /* SegmentLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegmentLineViewController.swift; path = CustomView/SegmentLineViewController.swift; sourceTree = "<group>"; };
-		A55C0B361E3C928C0092FD9C /* SegmentLineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SegmentLineViewController.xib; path = CustomView/SegmentLineViewController.xib; sourceTree = "<group>"; };
-		A55C0B391E3C92AF0092FD9C /* StopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StopsViewController.swift; path = CustomView/StopsViewController.swift; sourceTree = "<group>"; };
-		A55C0B3A1E3C92AF0092FD9C /* StopsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StopsViewController.xib; path = CustomView/StopsViewController.xib; sourceTree = "<group>"; };
+		A55C0B351E3C928C0092FD9C /* SegmentNodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegmentNodeViewController.swift; path = CustomView/SegmentNodeViewController.swift; sourceTree = "<group>"; };
+		A55C0B361E3C928C0092FD9C /* SegmentNodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SegmentNodeViewController.xib; path = CustomView/SegmentNodeViewController.xib; sourceTree = "<group>"; };
+		A55C0B391E3C92AF0092FD9C /* StopNodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StopNodeViewController.swift; path = CustomView/StopNodeViewController.swift; sourceTree = "<group>"; };
+		A55C0B3A1E3C92AF0092FD9C /* StopNodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StopNodeViewController.xib; path = CustomView/StopNodeViewController.xib; sourceTree = "<group>"; };
+		A55C0B3D1E3C9AA50092FD9C /* SegmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentsViewController.swift; sourceTree = "<group>"; };
+		A55C0B411E3C9AB30092FD9C /* StopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopsViewController.swift; sourceTree = "<group>"; };
+		A55C0B461E3CAF840092FD9C /* UIWebView+VectorDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+VectorDisplay.h"; sourceTree = "<group>"; };
+		A55C0B471E3CAF840092FD9C /* UIWebView+VectorDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+VectorDisplay.m"; sourceTree = "<group>"; };
 		A8A1859970136CF799434307 /* Pods_How2GoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_How2GoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6992B48DA03214D9E8546F3 /* Pods-How2Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How2Go.debug.xcconfig"; path = "Pods/Target Support Files/Pods-How2Go/Pods-How2Go.debug.xcconfig"; sourceTree = "<group>"; };
 		D780E0DA655E2D54C0F49489 /* Pods_How2Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_How2Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +214,7 @@
 		A55C0B041E3B26E30092FD9C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A55C0B451E3CAF840092FD9C /* UIWebView+VectorDisplay */,
 				A55C0B0B1E3B45B30092FD9C /* Constants.swift */,
 				A55C0B2D1E3C790F0092FD9C /* UIView+Extensions.swift */,
 			);
@@ -258,6 +266,8 @@
 				A55C0B1F1E3B92420092FD9C /* ViewController.swift */,
 				A55C0B251E3C706D0092FD9C /* RouteViewController.swift */,
 				A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */,
+				A55C0B3D1E3C9AA50092FD9C /* SegmentsViewController.swift */,
+				A55C0B411E3C9AB30092FD9C /* StopsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -265,12 +275,21 @@
 		A55C0B341E3C84200092FD9C /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				A55C0B351E3C928C0092FD9C /* SegmentLineViewController.swift */,
-				A55C0B361E3C928C0092FD9C /* SegmentLineViewController.xib */,
-				A55C0B391E3C92AF0092FD9C /* StopsViewController.swift */,
-				A55C0B3A1E3C92AF0092FD9C /* StopsViewController.xib */,
+				A55C0B351E3C928C0092FD9C /* SegmentNodeViewController.swift */,
+				A55C0B361E3C928C0092FD9C /* SegmentNodeViewController.xib */,
+				A55C0B391E3C92AF0092FD9C /* StopNodeViewController.swift */,
+				A55C0B3A1E3C92AF0092FD9C /* StopNodeViewController.xib */,
 			);
 			name = CustomView;
+			sourceTree = "<group>";
+		};
+		A55C0B451E3CAF840092FD9C /* UIWebView+VectorDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				A55C0B461E3CAF840092FD9C /* UIWebView+VectorDisplay.h */,
+				A55C0B471E3CAF840092FD9C /* UIWebView+VectorDisplay.m */,
+			);
+			path = "UIWebView+VectorDisplay";
 			sourceTree = "<group>";
 		};
 		E2866B86124BC672A24E3A8C /* Frameworks */ = {
@@ -405,11 +424,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A55C0B381E3C928C0092FD9C /* SegmentLineViewController.xib in Resources */,
+				A55C0B381E3C928C0092FD9C /* SegmentNodeViewController.xib in Resources */,
 				A55C0AE01E3B23E00092FD9C /* LaunchScreen.storyboard in Resources */,
 				A55C0ADD1E3B23E00092FD9C /* Assets.xcassets in Resources */,
 				A55C0ADB1E3B23E00092FD9C /* Main.storyboard in Resources */,
-				A55C0B3C1E3C92AF0092FD9C /* StopsViewController.xib in Resources */,
+				A55C0B3C1E3C92AF0092FD9C /* StopNodeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,12 +576,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55C0B3F1E3C9AA50092FD9C /* SegmentsViewController.swift in Sources */,
 				A55C0B201E3B92420092FD9C /* ViewController.swift in Sources */,
 				A55C0B101E3B46620092FD9C /* RoutesViewModel.swift in Sources */,
 				A55C0B2C1E3C761A0092FD9C /* RouteDetailsViewController.swift in Sources */,
 				A55C0B261E3C706D0092FD9C /* RouteViewController.swift in Sources */,
-				A55C0B3B1E3C92AF0092FD9C /* StopsViewController.swift in Sources */,
-				A55C0B371E3C928C0092FD9C /* SegmentLineViewController.swift in Sources */,
+				A55C0B431E3C9AB30092FD9C /* StopsViewController.swift in Sources */,
+				A55C0B3B1E3C92AF0092FD9C /* StopNodeViewController.swift in Sources */,
+				A55C0B481E3CAF840092FD9C /* UIWebView+VectorDisplay.m in Sources */,
+				A55C0B371E3C928C0092FD9C /* SegmentNodeViewController.swift in Sources */,
 				A55C0B1A1E3B4C120092FD9C /* Segment.swift in Sources */,
 				A55C0AD61E3B23E00092FD9C /* AppDelegate.swift in Sources */,
 				A55C0B281E3C712D0092FD9C /* MainRouter.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  SegmentLineViewController.swift
+//  StopNodeViewController.swift
 //  How2Go
 //
 //  Created by Mohammed Elsammak on 1/28/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SegmentLineViewController: UIViewController {
+class StopNodeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

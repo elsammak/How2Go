@@ -8,14 +8,16 @@
 
 import UIKit
 
-let normalHeightConstraint: CGFloat = 168.0
-let expandedHeightConstraint: CGFloat = UIScreen.main.bounds.height - 30.0
-
+private let normalHeightConstraint: CGFloat = 168.0
+private let routeDetailsVCHeight: CGFloat = 469.0
+private let expandedHeightConstraint: CGFloat = UIScreen.main.bounds.height - 30.0
+private let routeDetailsSegue = "RouteDetailsSegue"
 
 class RouteViewController: UIViewController, RoutesDelegate {
 
     // Properties
-    var isMapViewExpanded: Bool = false
+    var isMapViewExpanded: Bool = false    
+    var routeDetailsViewController: RouteDetailsViewController?
     
     //ViewModel
     var viewModel: RoutesViewModel = RoutesViewModel()
@@ -29,12 +31,9 @@ class RouteViewController: UIViewController, RoutesDelegate {
         viewModel.delegate = self
         viewModel.getRouteData()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+ 
+    // MARK:- IBActions
     @IBAction func expandOrShringMapView(_ sender: Any) {
         
         
@@ -51,13 +50,23 @@ class RouteViewController: UIViewController, RoutesDelegate {
         
         isMapViewExpanded = !isMapViewExpanded
     }
+    
+    // MARK:- Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == routeDetailsSegue {
+            
+            routeDetailsViewController = segue.destination as? RouteDetailsViewController
+        }
+    }
 
     // MARK:- RoutesDelegate methods
     func updateUIWithData(routes: [Route]?) {
         guard let routesArray = routes else {
             return
-        }
-        print("Count \(routesArray.count)")
+        }        
+        // Update current details view
+        routeDetailsViewController?.routesArray = routesArray
         
     }
     func updateUIWithError(error: Error) {
