@@ -12,7 +12,8 @@ public struct Provider {
     var providerIconUrl: String? = nil
     var disclaimer: String? = nil
     var displayName: String? = nil
- 
+    var itunesUrl: String? = nil
+    
     static func createObject(fromData data: NSDictionary)-> [Provider] {
         
         
@@ -34,6 +35,7 @@ public struct Provider {
         provider.providerIconUrl = data.value(forKey: "provider_icon_url") as? String
         provider.disclaimer = data.value(forKey: "disclaimer") as? String
         provider.displayName = data.value(forKey: "display_name") as? String
+        provider.itunesUrl = data.value(forKey: "ios_itunes_url") as? String
         
         return provider
     }

@@ -25,6 +25,11 @@
 		A55C0B201E3B92420092FD9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B1F1E3B92420092FD9C /* ViewController.swift */; };
 		A55C0B221E3B957B0092FD9C /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B211E3B957B0092FD9C /* Provider.swift */; };
 		A55C0B241E3B99500092FD9C /* ProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B231E3B99500092FD9C /* ProviderManager.swift */; };
+		A55C0B261E3C706D0092FD9C /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B251E3C706D0092FD9C /* RouteViewController.swift */; };
+		A55C0B281E3C712D0092FD9C /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B271E3C712D0092FD9C /* MainRouter.swift */; };
+		A55C0B2A1E3C75620092FD9C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55C0B291E3C75620092FD9C /* MapKit.framework */; };
+		A55C0B2C1E3C761A0092FD9C /* RouteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */; };
+		A55C0B2E1E3C790F0092FD9C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B2D1E3C790F0092FD9C /* UIView+Extensions.swift */; };
 		F86280533397F30487AB6543 /* Pods_How2GoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A1859970136CF799434307 /* Pods_How2GoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +79,11 @@
 		A55C0B1F1E3B92420092FD9C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A55C0B211E3B957B0092FD9C /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		A55C0B231E3B99500092FD9C /* ProviderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderManager.swift; sourceTree = "<group>"; };
+		A55C0B251E3C706D0092FD9C /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		A55C0B271E3C712D0092FD9C /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		A55C0B291E3C75620092FD9C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDetailsViewController.swift; sourceTree = "<group>"; };
+		A55C0B2D1E3C790F0092FD9C /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		A8A1859970136CF799434307 /* Pods_How2GoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_How2GoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6992B48DA03214D9E8546F3 /* Pods-How2Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How2Go.debug.xcconfig"; path = "Pods/Target Support Files/Pods-How2Go/Pods-How2Go.debug.xcconfig"; sourceTree = "<group>"; };
 		D780E0DA655E2D54C0F49489 /* Pods_How2Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_How2Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55C0B2A1E3C75620092FD9C /* MapKit.framework in Frameworks */,
 				A25B77F4084B520231EFA4C0 /* Pods_How2Go.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,10 +156,10 @@
 		A55C0AD41E3B23E00092FD9C /* How2Go */ = {
 			isa = PBXGroup;
 			children = (
-				A55C0B041E3B26E30092FD9C /* Common */,
 				A55C0B051E3B26E30092FD9C /* View */,
 				A55C0B061E3B26E30092FD9C /* ViewModel */,
 				A55C0B031E3B26E30092FD9C /* Model */,
+				A55C0B041E3B26E30092FD9C /* Common */,
 				A55C0AD51E3B23E00092FD9C /* AppDelegate.swift */,
 				A55C0AD91E3B23E00092FD9C /* Main.storyboard */,
 				A55C0ADC1E3B23E00092FD9C /* Assets.xcassets */,
@@ -189,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				A55C0B0B1E3B45B30092FD9C /* Constants.swift */,
+				A55C0B2D1E3C790F0092FD9C /* UIView+Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -197,6 +209,9 @@
 			isa = PBXGroup;
 			children = (
 				A55C0B1F1E3B92420092FD9C /* ViewController.swift */,
+				A55C0B251E3C706D0092FD9C /* RouteViewController.swift */,
+				A55C0B271E3C712D0092FD9C /* MainRouter.swift */,
+				A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,6 +248,7 @@
 		E2866B86124BC672A24E3A8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A55C0B291E3C75620092FD9C /* MapKit.framework */,
 				D780E0DA655E2D54C0F49489 /* Pods_How2Go.framework */,
 				3E206D83067FAEF2ABA90439 /* Pods_How2GoTests.framework */,
 				A8A1859970136CF799434307 /* Pods_How2GoUITests.framework */,
@@ -513,13 +529,17 @@
 			files = (
 				A55C0B201E3B92420092FD9C /* ViewController.swift in Sources */,
 				A55C0B101E3B46620092FD9C /* ViewModel.swift in Sources */,
+				A55C0B2C1E3C761A0092FD9C /* RouteDetailsViewController.swift in Sources */,
+				A55C0B261E3C706D0092FD9C /* RouteViewController.swift in Sources */,
 				A55C0B1A1E3B4C120092FD9C /* Segment.swift in Sources */,
 				A55C0AD61E3B23E00092FD9C /* AppDelegate.swift in Sources */,
+				A55C0B281E3C712D0092FD9C /* MainRouter.swift in Sources */,
 				A55C0B241E3B99500092FD9C /* ProviderManager.swift in Sources */,
 				A55C0B091E3B37EB0092FD9C /* APIClient.swift in Sources */,
 				A55C0B1C1E3B4C2B0092FD9C /* Stop.swift in Sources */,
 				A55C0B161E3B4B2F0092FD9C /* Route.swift in Sources */,
 				A55C0B1E1E3B862F0092FD9C /* Properties.swift in Sources */,
+				A55C0B2E1E3C790F0092FD9C /* UIView+Extensions.swift in Sources */,
 				A55C0B221E3B957B0092FD9C /* Provider.swift in Sources */,
 				A55C0B0C1E3B45B30092FD9C /* Constants.swift in Sources */,
 			);
