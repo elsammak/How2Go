@@ -17,7 +17,7 @@
 		A55C0AF61E3B23E00092FD9C /* How2GoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0AF51E3B23E00092FD9C /* How2GoUITests.swift */; };
 		A55C0B091E3B37EB0092FD9C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B081E3B37EB0092FD9C /* APIClient.swift */; };
 		A55C0B0C1E3B45B30092FD9C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B0B1E3B45B30092FD9C /* Constants.swift */; };
-		A55C0B101E3B46620092FD9C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B0F1E3B46620092FD9C /* ViewModel.swift */; };
+		A55C0B101E3B46620092FD9C /* RoutesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B0F1E3B46620092FD9C /* RoutesViewModel.swift */; };
 		A55C0B161E3B4B2F0092FD9C /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B151E3B4B2F0092FD9C /* Route.swift */; };
 		A55C0B1A1E3B4C120092FD9C /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B191E3B4C120092FD9C /* Segment.swift */; };
 		A55C0B1C1E3B4C2B0092FD9C /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B1B1E3B4C2B0092FD9C /* Stop.swift */; };
@@ -30,6 +30,10 @@
 		A55C0B2A1E3C75620092FD9C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55C0B291E3C75620092FD9C /* MapKit.framework */; };
 		A55C0B2C1E3C761A0092FD9C /* RouteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */; };
 		A55C0B2E1E3C790F0092FD9C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B2D1E3C790F0092FD9C /* UIView+Extensions.swift */; };
+		A55C0B371E3C928C0092FD9C /* SegmentLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B351E3C928C0092FD9C /* SegmentLineViewController.swift */; };
+		A55C0B381E3C928C0092FD9C /* SegmentLineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55C0B361E3C928C0092FD9C /* SegmentLineViewController.xib */; };
+		A55C0B3B1E3C92AF0092FD9C /* StopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B391E3C92AF0092FD9C /* StopsViewController.swift */; };
+		A55C0B3C1E3C92AF0092FD9C /* StopsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55C0B3A1E3C92AF0092FD9C /* StopsViewController.xib */; };
 		F86280533397F30487AB6543 /* Pods_How2GoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A1859970136CF799434307 /* Pods_How2GoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +75,7 @@
 		A55C0AF71E3B23E00092FD9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A55C0B081E3B37EB0092FD9C /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A55C0B0B1E3B45B30092FD9C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		A55C0B0F1E3B46620092FD9C /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A55C0B0F1E3B46620092FD9C /* RoutesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesViewModel.swift; sourceTree = "<group>"; };
 		A55C0B151E3B4B2F0092FD9C /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		A55C0B191E3B4C120092FD9C /* Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 		A55C0B1B1E3B4C2B0092FD9C /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
@@ -84,6 +88,10 @@
 		A55C0B291E3C75620092FD9C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDetailsViewController.swift; sourceTree = "<group>"; };
 		A55C0B2D1E3C790F0092FD9C /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		A55C0B351E3C928C0092FD9C /* SegmentLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegmentLineViewController.swift; path = CustomView/SegmentLineViewController.swift; sourceTree = "<group>"; };
+		A55C0B361E3C928C0092FD9C /* SegmentLineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SegmentLineViewController.xib; path = CustomView/SegmentLineViewController.xib; sourceTree = "<group>"; };
+		A55C0B391E3C92AF0092FD9C /* StopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StopsViewController.swift; path = CustomView/StopsViewController.swift; sourceTree = "<group>"; };
+		A55C0B3A1E3C92AF0092FD9C /* StopsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StopsViewController.xib; path = CustomView/StopsViewController.xib; sourceTree = "<group>"; };
 		A8A1859970136CF799434307 /* Pods_How2GoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_How2GoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6992B48DA03214D9E8546F3 /* Pods-How2Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How2Go.debug.xcconfig"; path = "Pods/Target Support Files/Pods-How2Go/Pods-How2Go.debug.xcconfig"; sourceTree = "<group>"; };
 		D780E0DA655E2D54C0F49489 /* Pods_How2Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_How2Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,10 +216,9 @@
 		A55C0B051E3B26E30092FD9C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A55C0B1F1E3B92420092FD9C /* ViewController.swift */,
-				A55C0B251E3C706D0092FD9C /* RouteViewController.swift */,
+				A55C0B341E3C84200092FD9C /* CustomView */,
+				A55C0B2F1E3C83E90092FD9C /* ViewControllers */,
 				A55C0B271E3C712D0092FD9C /* MainRouter.swift */,
-				A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -219,7 +226,7 @@
 		A55C0B061E3B26E30092FD9C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A55C0B0F1E3B46620092FD9C /* ViewModel.swift */,
+				A55C0B0F1E3B46620092FD9C /* RoutesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -243,6 +250,27 @@
 				A55C0B231E3B99500092FD9C /* ProviderManager.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		A55C0B2F1E3C83E90092FD9C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A55C0B1F1E3B92420092FD9C /* ViewController.swift */,
+				A55C0B251E3C706D0092FD9C /* RouteViewController.swift */,
+				A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A55C0B341E3C84200092FD9C /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				A55C0B351E3C928C0092FD9C /* SegmentLineViewController.swift */,
+				A55C0B361E3C928C0092FD9C /* SegmentLineViewController.xib */,
+				A55C0B391E3C92AF0092FD9C /* StopsViewController.swift */,
+				A55C0B3A1E3C92AF0092FD9C /* StopsViewController.xib */,
+			);
+			name = CustomView;
 			sourceTree = "<group>";
 		};
 		E2866B86124BC672A24E3A8C /* Frameworks */ = {
@@ -377,9 +405,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55C0B381E3C928C0092FD9C /* SegmentLineViewController.xib in Resources */,
 				A55C0AE01E3B23E00092FD9C /* LaunchScreen.storyboard in Resources */,
 				A55C0ADD1E3B23E00092FD9C /* Assets.xcassets in Resources */,
 				A55C0ADB1E3B23E00092FD9C /* Main.storyboard in Resources */,
+				A55C0B3C1E3C92AF0092FD9C /* StopsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,9 +558,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A55C0B201E3B92420092FD9C /* ViewController.swift in Sources */,
-				A55C0B101E3B46620092FD9C /* ViewModel.swift in Sources */,
+				A55C0B101E3B46620092FD9C /* RoutesViewModel.swift in Sources */,
 				A55C0B2C1E3C761A0092FD9C /* RouteDetailsViewController.swift in Sources */,
 				A55C0B261E3C706D0092FD9C /* RouteViewController.swift in Sources */,
+				A55C0B3B1E3C92AF0092FD9C /* StopsViewController.swift in Sources */,
+				A55C0B371E3C928C0092FD9C /* SegmentLineViewController.swift in Sources */,
 				A55C0B1A1E3B4C120092FD9C /* Segment.swift in Sources */,
 				A55C0AD61E3B23E00092FD9C /* AppDelegate.swift in Sources */,
 				A55C0B281E3C712D0092FD9C /* MainRouter.swift in Sources */,

@@ -11,14 +11,23 @@ import UIKit
 let normalHeightConstraint: CGFloat = 168.0
 let expandedHeightConstraint: CGFloat = UIScreen.main.bounds.height - 30.0
 
-class RouteViewController: UIViewController {
 
+class RouteViewController: UIViewController, RoutesDelegate {
+
+    // Properties
     var isMapViewExpanded: Bool = false
+    
+    //ViewModel
+    var viewModel: RoutesViewModel = RoutesViewModel()
+    
+    //IBoutlets
     @IBOutlet weak var mapHeightConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        viewModel.delegate = self
+        viewModel.getRouteData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,14 +52,16 @@ class RouteViewController: UIViewController {
         isMapViewExpanded = !isMapViewExpanded
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK:- RoutesDelegate methods
+    func updateUIWithData(routes: [Route]?) {
+        guard let routesArray = routes else {
+            return
+        }
+        print("Count \(routesArray.count)")
+        
     }
-    */
+    func updateUIWithError(error: Error) {
+        
+    }
 
 }

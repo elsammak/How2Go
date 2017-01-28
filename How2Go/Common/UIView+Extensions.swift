@@ -6,7 +6,7 @@
 //  Copyright © 2017 How2Go. All rights reserved.
 //
 
-import Foundation
+import UIKit
 @IBDesignable extension UIView {
     @IBInspectable var borderColor: UIColor? {
         set {
