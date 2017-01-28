@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import MapKit
 
 private let normalHeightConstraint: CGFloat = 168.0
 private let routeDetailsVCHeight: CGFloat = 469.0
 private let expandedHeightConstraint: CGFloat = UIScreen.main.bounds.height - 30.0
 private let routeDetailsSegue = "RouteDetailsSegue"
 
-class RouteViewController: UIViewController, RoutesDelegate {
+class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate {
 
     // Properties
     var isMapViewExpanded: Bool = false    
@@ -24,6 +25,8 @@ class RouteViewController: UIViewController, RoutesDelegate {
     
     //IBoutlets
     @IBOutlet weak var mapHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,9 +71,30 @@ class RouteViewController: UIViewController, RoutesDelegate {
         // Update current details view
         routeDetailsViewController?.routesArray = routesArray
         
+        let polyline = MKPolyline(encodedString: "uvr_I{yxpABuAFcAp@yHvAwNr@iGPwAh@a@jAg@")
+        self.mapView.add(polyline!, level: MKOverlayLevel.aboveRoads)
+        
     }
     func updateUIWithError(error: Error) {
         
     }
 
+    // MARK:- MKMapViewDelegate
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        
+        
+        if overlay is MKPolyline {
+            // draw the track
+            let polyLine = overlay
+            let polyLineRenderer = MKPolylineRenderer(overlay: polyLine)
+            polyLineRenderer.strokeColor = UIColor.blue
+            polyLineRenderer.lineWidth = 2.0
+            
+            return polyLineRenderer
+        }
+        
+        return MKOverlayRenderer()
+    }
+    
+    
 }

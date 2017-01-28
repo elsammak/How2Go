@@ -6,8 +6,8 @@ target 'How2Go' do
   use_frameworks!
 
   # Pods for How2Go
-  pod 'Alamofire'  
-  
+  pod 'Alamofire'    
+
   target 'How2GoTests' do
     inherit! :search_paths
     # Pods for testing

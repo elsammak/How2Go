@@ -13,9 +13,17 @@ let stopsSegue = "StopssSegue"
 
 class RouteDetailsViewController: UIViewController {
 
+    // IBOutlets
     @IBOutlet weak var nextButton: UIButton!
-    
     @IBOutlet weak var previousButton: UIButton!
+    
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var providerLogo: UIWebView!
+    @IBOutlet weak var segmentsLabel: UILabel!
+    @IBOutlet weak var stopsLabel: UILabel!
+    @IBOutlet weak var propertiesLabel: UILabel!
+    
     var segmentsViewController: SegmentsViewController?
     var stopsViewController: StopsViewController?
     var currentSelectedRouteIndex: Int = 0
@@ -40,7 +48,20 @@ class RouteDetailsViewController: UIViewController {
         
         currentRoute = routesArray[currentSelectedRouteIndex]
         segmentsViewController?.segmentsArray = (currentRoute?.segments)!
-        print(currentRoute?.provider?.displayName)
+        
+        typeLabel.text = (currentRoute?.type).map { $0.rawValue }
+        priceLabel.text = currentRoute?.price.getFormatValue()
+        DispatchQueue.main.async(execute: {
+            self.providerLogo.loadSVGImage(imageUrl: (self.currentRoute?.provider?.providerIconUrl)!)
+        })
+        
+        if let segmentsCount = currentRoute?.segments.count {
+            segmentsLabel.text = String.init(format: "\(segmentsCount) segments")
+        }
+        if let stopsCount = currentRoute?.getNumberOfStops() {
+            stopsLabel.text = String.init(format: "\(stopsCount) stops")
+        }
+                
     }
     
     // MARK:- IBAcions
@@ -58,11 +79,28 @@ class RouteDetailsViewController: UIViewController {
     
     @IBAction func switchToPreviousRoute(_ sender: Any) {
         
-        if currentSelectedRouteIndex <= 0 {
-            currentSelectedRouteIndex = currentSelectedRouteIndex + 1
+        if currentSelectedRouteIndex > 0 {
+            currentSelectedRouteIndex = currentSelectedRouteIndex - 1
             adjustButtonsStatus()
             updateUI()
         }        
+    }
+    @IBAction func logoButtonPressed(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Open itunes page",
+                                      message: "Are your sure you want to open in itunes",
+                                      preferredStyle: UIAlertControllerStyle.alert)
+//        alert.view.tintColor = UIColor.blueSystemColor()
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { _ in
+            guard let url = URL(string: (self.currentRoute?.provider?.itunesUrl)!) else { return }
+            UIApplication.shared.openURL(url)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func propertiesButtonPressed(_ sender: Any) {
+        
     }
 
     // MARK:- Navigation

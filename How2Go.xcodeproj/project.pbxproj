@@ -36,7 +36,8 @@
 		A55C0B3C1E3C92AF0092FD9C /* StopNodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55C0B3A1E3C92AF0092FD9C /* StopNodeViewController.xib */; };
 		A55C0B3F1E3C9AA50092FD9C /* SegmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B3D1E3C9AA50092FD9C /* SegmentsViewController.swift */; };
 		A55C0B431E3C9AB30092FD9C /* StopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B411E3C9AB30092FD9C /* StopsViewController.swift */; };
-		A55C0B481E3CAF840092FD9C /* UIWebView+VectorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B471E3CAF840092FD9C /* UIWebView+VectorDisplay.m */; };
+		A5FBDBBE1E3D235B006C3987 /* UIWebView+Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FBDBBD1E3D235B006C3987 /* UIWebView+Vector.swift */; };
+		A5FBDBC21E3D3385006C3987 /* MKPolyline+MKPolyline_EncodedString.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FBDBC11E3D3385006C3987 /* MKPolyline+MKPolyline_EncodedString.m */; };
 		F86280533397F30487AB6543 /* Pods_How2GoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A1859970136CF799434307 /* Pods_How2GoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,8 +98,10 @@
 		A55C0B3A1E3C92AF0092FD9C /* StopNodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StopNodeViewController.xib; path = CustomView/StopNodeViewController.xib; sourceTree = "<group>"; };
 		A55C0B3D1E3C9AA50092FD9C /* SegmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentsViewController.swift; sourceTree = "<group>"; };
 		A55C0B411E3C9AB30092FD9C /* StopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopsViewController.swift; sourceTree = "<group>"; };
-		A55C0B461E3CAF840092FD9C /* UIWebView+VectorDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+VectorDisplay.h"; sourceTree = "<group>"; };
-		A55C0B471E3CAF840092FD9C /* UIWebView+VectorDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+VectorDisplay.m"; sourceTree = "<group>"; };
+		A5FBDBBD1E3D235B006C3987 /* UIWebView+Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Vector.swift"; sourceTree = "<group>"; };
+		A5FBDBBF1E3D3385006C3987 /* How2Go-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "How2Go-Bridging-Header.h"; sourceTree = "<group>"; };
+		A5FBDBC01E3D3385006C3987 /* MKPolyline+MKPolyline_EncodedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKPolyline+MKPolyline_EncodedString.h"; sourceTree = "<group>"; };
+		A5FBDBC11E3D3385006C3987 /* MKPolyline+MKPolyline_EncodedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKPolyline+MKPolyline_EncodedString.m"; sourceTree = "<group>"; };
 		A8A1859970136CF799434307 /* Pods_How2GoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_How2GoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6992B48DA03214D9E8546F3 /* Pods-How2Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How2Go.debug.xcconfig"; path = "Pods/Target Support Files/Pods-How2Go/Pods-How2Go.debug.xcconfig"; sourceTree = "<group>"; };
 		D780E0DA655E2D54C0F49489 /* Pods_How2Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_How2Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,9 +217,12 @@
 		A55C0B041E3B26E30092FD9C /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				A55C0B451E3CAF840092FD9C /* UIWebView+VectorDisplay */,
 				A55C0B0B1E3B45B30092FD9C /* Constants.swift */,
 				A55C0B2D1E3C790F0092FD9C /* UIView+Extensions.swift */,
+				A5FBDBBD1E3D235B006C3987 /* UIWebView+Vector.swift */,
+				A5FBDBC01E3D3385006C3987 /* MKPolyline+MKPolyline_EncodedString.h */,
+				A5FBDBC11E3D3385006C3987 /* MKPolyline+MKPolyline_EncodedString.m */,
+				A5FBDBBF1E3D3385006C3987 /* How2Go-Bridging-Header.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -281,15 +287,6 @@
 				A55C0B3A1E3C92AF0092FD9C /* StopNodeViewController.xib */,
 			);
 			name = CustomView;
-			sourceTree = "<group>";
-		};
-		A55C0B451E3CAF840092FD9C /* UIWebView+VectorDisplay */ = {
-			isa = PBXGroup;
-			children = (
-				A55C0B461E3CAF840092FD9C /* UIWebView+VectorDisplay.h */,
-				A55C0B471E3CAF840092FD9C /* UIWebView+VectorDisplay.m */,
-			);
-			path = "UIWebView+VectorDisplay";
 			sourceTree = "<group>";
 		};
 		E2866B86124BC672A24E3A8C /* Frameworks */ = {
@@ -583,14 +580,15 @@
 				A55C0B261E3C706D0092FD9C /* RouteViewController.swift in Sources */,
 				A55C0B431E3C9AB30092FD9C /* StopsViewController.swift in Sources */,
 				A55C0B3B1E3C92AF0092FD9C /* StopNodeViewController.swift in Sources */,
-				A55C0B481E3CAF840092FD9C /* UIWebView+VectorDisplay.m in Sources */,
 				A55C0B371E3C928C0092FD9C /* SegmentNodeViewController.swift in Sources */,
 				A55C0B1A1E3B4C120092FD9C /* Segment.swift in Sources */,
+				A5FBDBC21E3D3385006C3987 /* MKPolyline+MKPolyline_EncodedString.m in Sources */,
 				A55C0AD61E3B23E00092FD9C /* AppDelegate.swift in Sources */,
 				A55C0B281E3C712D0092FD9C /* MainRouter.swift in Sources */,
 				A55C0B241E3B99500092FD9C /* ProviderManager.swift in Sources */,
 				A55C0B091E3B37EB0092FD9C /* APIClient.swift in Sources */,
 				A55C0B1C1E3B4C2B0092FD9C /* Stop.swift in Sources */,
+				A5FBDBBE1E3D235B006C3987 /* UIWebView+Vector.swift in Sources */,
 				A55C0B161E3B4B2F0092FD9C /* Route.swift in Sources */,
 				A55C0B1E1E3B862F0092FD9C /* Properties.swift in Sources */,
 				A55C0B2E1E3C790F0092FD9C /* UIView+Extensions.swift in Sources */,
@@ -746,11 +744,14 @@
 			baseConfigurationReference = C6992B48DA03214D9E8546F3 /* Pods-How2Go.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VD99NBZ76D;
 				INFOPLIST_FILE = How2Go/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elsammak.How2Go;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "How2Go/Common/How2Go-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -760,11 +761,13 @@
 			baseConfigurationReference = 31B97B91CFC4161604E5BDA9 /* Pods-How2Go.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VD99NBZ76D;
 				INFOPLIST_FILE = How2Go/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elsammak.How2Go;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "How2Go/Common/How2Go-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

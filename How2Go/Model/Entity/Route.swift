@@ -70,6 +70,15 @@ public struct Route {
             return String(format: "%0.2f €", self.amount)
         }
     }
+    
+    
+    public func getNumberOfStops()-> Int {
+        var stopsCount = 0
+        for segment in segments {
+            stopsCount += segment.stops.count
+        }
+        return stopsCount
+    }
 }
 
 // MARK:- Private helpers

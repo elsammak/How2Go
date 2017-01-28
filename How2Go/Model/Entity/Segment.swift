@@ -50,6 +50,7 @@ struct Segment {
         
         return segment
     }
+    
 }
 
 // Private helpers

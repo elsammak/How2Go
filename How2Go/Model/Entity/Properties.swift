@@ -7,13 +7,13 @@
 //
 /// Properties class, the only Class Model due to OOP requirements
 import Foundation
-enum RouteType {
-    case none
-    case public_transport
-    case car_sharing
-    case private_bike
-    case bike_sharing
-    case taxi
+enum RouteType: String {
+    case none = "--"
+    case public_transport = "Public Transport"
+    case car_sharing = "Car Sharing"
+    case private_bike = "Private Bike"
+    case bike_sharing = "Bike Sharing"
+    case taxi = "Taxi"
 }
 public class Properties {
     
