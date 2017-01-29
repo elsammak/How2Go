@@ -22,7 +22,7 @@ struct Stop {
         stop.lat = data.value(forKey: "lat") as! Double
         stop.lon = data.value(forKey: "lng") as! Double
         stop.dateTime = data.value(forKey: "datetime") as! String
-        stop.name = data.value(forKey: "name") as? String
+        stop.name = data.value(forKey: "name") as? String ?? "--"
         stop.properties = data.value(forKey: "properties") as? String
         return stop
     }

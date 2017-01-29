@@ -19,7 +19,7 @@ class SegmentsViewController: UIViewController, UICollectionViewDelegate, UIColl
         didSet {
             elementsArray.removeAll()
             elementsArray = segmentsArray
-            self.segmentsCollectionView.reloadData()
+            reloadData()
         }
     }
     
@@ -54,7 +54,10 @@ class SegmentsViewController: UIViewController, UICollectionViewDelegate, UIColl
             else if indexPath.row == elementsArray.count - 1 {
                 segmentNodeCollectionViewCell.removeLastLine()
             }
-            
+            if elementsArray.count == 1 {
+                segmentNodeCollectionViewCell.removeFirstLine()
+                segmentNodeCollectionViewCell.removeLastLine()
+            }
             return segmentNodeCollectionViewCell
         }
         else if elementsArray[indexPath.row] is Stop { // Stop cell
@@ -88,6 +91,9 @@ class SegmentsViewController: UIViewController, UICollectionViewDelegate, UIColl
     // MARK: - UICollectionView Delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        guard elementsArray.count > 1 else{
+            return
+        }
         var segmentIndex = indexPath.row
         if elementsArray[segmentIndex] is Stop {
             segmentIndex = getCurrentExpandedSegmentIndex(currentStopIndex: segmentIndex)
@@ -110,10 +116,8 @@ class SegmentsViewController: UIViewController, UICollectionViewDelegate, UIColl
             elementsArray[segmentIndex] = segment
             
         }
-        let range = Range(uncheckedBounds: (0, collectionView.numberOfSections))
-        let indexSet = IndexSet(integersIn: range)
-        segmentsCollectionView.reloadSections(indexSet)
         
+        reloadData()
     }
     
     // MARK:- Private helpers
@@ -128,5 +132,11 @@ class SegmentsViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
         return segmentIndex
         
+    }
+    
+    private func reloadData() {
+        let range = Range(uncheckedBounds: (0, segmentsCollectionView.numberOfSections))
+        let indexSet = IndexSet(integersIn: range)
+        segmentsCollectionView.reloadSections(indexSet)
     }
 }

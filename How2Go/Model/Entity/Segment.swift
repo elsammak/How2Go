@@ -39,8 +39,7 @@ struct Segment {
     static func createObject(fromData data: NSDictionary)-> Segment {
         
         var segment = Segment()
-        segment.name = data.value(forKey: "name") as? String
-        segment.numberOfStops = data.value(forKey: "num_stops") as! Int
+        segment.name = data.value(forKey: "name") as? String        
         segment.travelMode = parseTravelMode(string: data.value(forKey: "travel_mode") as! String)
         segment.description = data.value(forKey: "description") as? String
         segment.color = data.value(forKey: "color") as! String
@@ -51,6 +50,7 @@ struct Segment {
         for stop in stops {
             segment.stops.append(Stop.createObject(fromData: stop))
         }
+        segment.numberOfStops = segment.stops.count
         
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         if let firstStopDate = dateFormatter.date(from: segment.stops[0].dateTime), let lastStopDate = dateFormatter.date(from: segment.stops[segment.stops.count - 1].dateTime){
