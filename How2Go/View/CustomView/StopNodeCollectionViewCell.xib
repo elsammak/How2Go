@@ -49,7 +49,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXZ-kN-iv0" userLabel="Stop name">
-                                <rect key="frame" x="2" y="90" width="120" height="12"/>
+                                <rect key="frame" x="2" y="95" width="120" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="hX6-8c-8yX"/>
                                 </constraints>
@@ -64,7 +64,7 @@
                             <constraint firstAttribute="trailing" secondItem="0aI-Z9-v9k" secondAttribute="trailing" id="5id-8G-Yhv"/>
                             <constraint firstItem="3si-Hd-p58" firstAttribute="centerX" secondItem="JCx-ET-fDD" secondAttribute="centerX" id="8on-eb-9aq"/>
                             <constraint firstItem="GXZ-kN-iv0" firstAttribute="leading" secondItem="JCx-ET-fDD" secondAttribute="leading" constant="2" id="HrJ-K4-PgK"/>
-                            <constraint firstItem="GXZ-kN-iv0" firstAttribute="top" secondItem="3si-Hd-p58" secondAttribute="bottom" constant="35" id="ZSY-Gf-SEV"/>
+                            <constraint firstItem="GXZ-kN-iv0" firstAttribute="top" secondItem="3si-Hd-p58" secondAttribute="bottom" constant="40" id="ZSY-Gf-SEV"/>
                             <constraint firstItem="3si-Hd-p58" firstAttribute="leading" secondItem="Jn7-PS-Phx" secondAttribute="trailing" id="hWu-nl-Yl6"/>
                             <constraint firstItem="0aI-Z9-v9k" firstAttribute="leading" secondItem="3si-Hd-p58" secondAttribute="trailing" id="is8-35-pyp"/>
                             <constraint firstItem="Jn7-PS-Phx" firstAttribute="top" secondItem="JCx-ET-fDD" secondAttribute="top" constant="40" id="oKe-Qt-02z"/>

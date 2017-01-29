@@ -88,11 +88,15 @@ class SegmentsViewController: UIViewController, UICollectionViewDelegate, UIColl
     // MARK: - UICollectionView Delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        var segmentIndex = indexPath.row
+        if elementsArray[segmentIndex] is Stop {
+            segmentIndex = getCurrentExpandedSegmentIndex(currentStopIndex: segmentIndex)
+        }
         
-        if elementsArray[indexPath.row] is Segment { // Check for status
-            var segment = elementsArray[indexPath.row] as! Segment
+        if elementsArray[segmentIndex] is Segment { // Check for status
+            var segment = elementsArray[segmentIndex] as! Segment
             let stopsArray = segment.stops
-            var index = indexPath.row + 1
+            var index = segmentIndex + 1
             for stop in stopsArray {
                 if segment.isExpanded { // Shrink
                     elementsArray.remove(at: index)
@@ -103,10 +107,24 @@ class SegmentsViewController: UIViewController, UICollectionViewDelegate, UIColl
                 }
             }
             segment.isExpanded = !segment.isExpanded
-            elementsArray[indexPath.row] = segment
+            elementsArray[segmentIndex] = segment
             
         }
     
         segmentsCollectionView.reloadData()
+    }
+    
+    // MARK:- Private helpers
+    private func getCurrentExpandedSegmentIndex(currentStopIndex: Int)-> Int{
+        var segmentIndex = currentStopIndex
+        
+        for i in (0...currentStopIndex).reversed()  {
+            if elementsArray[i] is Segment {
+                segmentIndex = i
+                break
+            }
+        }
+        return segmentIndex
+        
     }
 }
