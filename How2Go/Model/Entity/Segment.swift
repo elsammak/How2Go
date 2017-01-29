@@ -31,6 +31,9 @@ struct Segment {
     var polyline: String? = nil
     var stops: [Stop] = []
     var isExpanded: Bool = false
+    var totalTime: String = ""
+    
+    static internal var dateFormatter: DateFormatter = DateFormatter()
     
     // MARK:- Static methods
     static func createObject(fromData data: NSDictionary)-> Segment {
@@ -47,6 +50,12 @@ struct Segment {
         let stops = data.value(forKey: "stops") as! [NSDictionary]
         for stop in stops {
             segment.stops.append(Stop.createObject(fromData: stop))
+        }
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        if let firstStopDate = dateFormatter.date(from: segment.stops[0].dateTime), let lastStopDate = dateFormatter.date(from: segment.stops[segment.stops.count - 1].dateTime){
+            let minutesDiff = (lastStopDate.timeIntervalSince(firstStopDate)) / 60.0;
+            segment.totalTime = String.init(format: "\(minutesDiff) minutes")
         }
         
         return segment

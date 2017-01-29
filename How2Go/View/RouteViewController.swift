@@ -14,7 +14,7 @@ private let routeDetailsVCHeight: CGFloat = 469.0
 private let expandedHeightConstraint: CGFloat = UIScreen.main.bounds.height - 30.0
 private let routeDetailsSegue = "RouteDetailsSegue"
 
-class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, RouteDetailsDelegate {
+class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, RouteDetailsDelegate, UIScrollViewDelegate {
 
     // Properties
     var isMapViewExpanded: Bool = false    
@@ -25,9 +25,10 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
     
     //IBoutlets
     @IBOutlet weak var mapHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var horizontalScrollView: UIScrollView!
+    @IBOutlet weak var routeDetailsContainerHeightConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +36,11 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
         viewModel.getRouteData()
         
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        horizontalScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 469)
+        routeDetailsContainerHeightConstraint.constant = 469
+    }
  
     // MARK:- IBActions
     @IBAction func expandOrShringMapView(_ sender: Any) {
@@ -121,5 +126,7 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
         return MKOverlayRenderer()
     }
     
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("Scroll")
+    }
 }
