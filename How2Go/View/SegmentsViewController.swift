@@ -31,7 +31,7 @@ class SegmentsViewController: UIViewController {
         
         var index = 0
         // Create nodes and add them to self view
-        for i in 0 ..< 10 {
+        for segment in segmentsArray {
             var segmentNodeView = SegmentNodeViewController()
             var origin = segmentNodeView.view.frame.origin
             origin.x = CGFloat(index * nodeWidth)

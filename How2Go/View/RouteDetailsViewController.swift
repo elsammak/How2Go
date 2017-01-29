@@ -11,6 +11,9 @@ import UIKit
 let segmentsSegue = "SegmentsSegue"
 let stopsSegue = "StopssSegue"
 
+protocol RouteDetailsDelegate {
+    func updateMapForCurrentRoute(currentRoute: Route)
+}
 class RouteDetailsViewController: UIViewController {
 
     // IBOutlets
@@ -26,6 +29,7 @@ class RouteDetailsViewController: UIViewController {
     
     var segmentsViewController: SegmentsViewController?
     var stopsViewController: StopsViewController?
+    var routeDetailsDelegate: RouteDetailsDelegate? = nil
     var currentSelectedRouteIndex: Int = 0
     var currentRoute: Route? = nil
     var routesArray: [Route] = [] {
@@ -47,6 +51,9 @@ class RouteDetailsViewController: UIViewController {
     func updateUI() {
         
         currentRoute = routesArray[currentSelectedRouteIndex]
+        
+        routeDetailsDelegate?.updateMapForCurrentRoute(currentRoute: currentRoute!)
+        
         segmentsViewController?.segmentsArray = (currentRoute?.segments)!
         
         typeLabel.text = (currentRoute?.type).map { $0.rawValue }

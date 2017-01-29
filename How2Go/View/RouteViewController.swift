@@ -14,7 +14,7 @@ private let routeDetailsVCHeight: CGFloat = 469.0
 private let expandedHeightConstraint: CGFloat = UIScreen.main.bounds.height - 30.0
 private let routeDetailsSegue = "RouteDetailsSegue"
 
-class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate {
+class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, RouteDetailsDelegate {
 
     // Properties
     var isMapViewExpanded: Bool = false    
@@ -60,6 +60,7 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate {
         if segue.identifier == routeDetailsSegue {
             
             routeDetailsViewController = segue.destination as? RouteDetailsViewController
+            routeDetailsViewController?.routeDetailsDelegate = self
         }
     }
 
@@ -71,14 +72,37 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate {
         // Update current details view
         routeDetailsViewController?.routesArray = routesArray
         
-        let polyline = MKPolyline(encodedString: "uvr_I{yxpABuAFcAp@yHvAwNr@iGPwAh@a@jAg@")
-        self.mapView.add(polyline!, level: MKOverlayLevel.aboveRoads)
-        
     }
     func updateUIWithError(error: Error) {
         
+        let alert = UIAlertController(title: "Error",
+                                      message: error.localizedDescription,
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.default, handler: { _ in
+            self.viewModel.getRouteData()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 
+    // MARK:- RouteDetailsDelegate
+    func updateMapForCurrentRoute(currentRoute: Route) {
+                
+        // Update map
+         mapView.removeOverlays(mapView.overlays)
+        
+        //Draw route
+        for segment in currentRoute.segments {
+            if let polyline = MKPolyline(encodedString: segment.polyline){
+                self.mapView.add(polyline, level: MKOverlayLevel.aboveRoads)
+            }
+        }
+        //Focus map
+        if let first = mapView.overlays.first {
+            let rect = mapView.overlays.reduce(first.boundingMapRect, {MKMapRectUnion($0, $1.boundingMapRect)})
+            mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0), animated: true)
+        }
+    }
     // MARK:- MKMapViewDelegate
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         
@@ -87,7 +111,7 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate {
             // draw the track
             let polyLine = overlay
             let polyLineRenderer = MKPolylineRenderer(overlay: polyLine)
-            polyLineRenderer.strokeColor = UIColor.blue
+            polyLineRenderer.strokeColor = UIColor.cyan
             polyLineRenderer.lineWidth = 2.0
             
             return polyLineRenderer
