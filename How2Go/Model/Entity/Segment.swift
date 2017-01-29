@@ -30,6 +30,7 @@ struct Segment {
     var iconUrl: String = ""
     var polyline: String? = nil
     var stops: [Stop] = []
+    var isExpanded: Bool = false
     
     // MARK:- Static methods
     static func createObject(fromData data: NSDictionary)-> Segment {

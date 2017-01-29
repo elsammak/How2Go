@@ -11,6 +11,9 @@ import UIKit
 class StopNodeCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var stopNameLabel: UILabel!
+    @IBOutlet weak var rightLine: UIView!
+    @IBOutlet weak var leftLine: UIView!
+    
     var stop: Stop = Stop() {
         didSet {
             updateUI()
@@ -26,6 +29,14 @@ class StopNodeCollectionViewCell: UICollectionViewCell {
     func updateUI() {
         
         stopNameLabel.text = stop.name
-        
+        leftLine.alpha = 1
+        rightLine.alpha = 1
+    }
+    
+    func removeFirstLine() {
+        leftLine.alpha = 0
+    }
+    func removeLastLine() {
+        rightLine.alpha = 0
     }
 }

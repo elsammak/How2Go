@@ -18,7 +18,7 @@ class SegmentNodeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var segmentName: UILabel!
     @IBOutlet weak var numberOfStops: UILabel!
     @IBOutlet weak var travelMode: UILabel!
-    
+    var isExpanded: Bool = false
     var segment: Segment = Segment() {
         didSet {
             updateUI()
