@@ -33,6 +33,7 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
 
         viewModel.delegate = self
         viewModel.getRouteData()
+        
     }
     
  

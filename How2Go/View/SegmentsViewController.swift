@@ -110,8 +110,10 @@ class SegmentsViewController: UIViewController, UICollectionViewDelegate, UIColl
             elementsArray[segmentIndex] = segment
             
         }
-    
-        segmentsCollectionView.reloadData()
+        let range = Range(uncheckedBounds: (0, collectionView.numberOfSections))
+        let indexSet = IndexSet(integersIn: range)
+        segmentsCollectionView.reloadSections(indexSet)
+        
     }
     
     // MARK:- Private helpers

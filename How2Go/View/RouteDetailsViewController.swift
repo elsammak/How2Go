@@ -44,7 +44,13 @@ class RouteDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(switchToPreviousRoute(_:)))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(switchToNextRoute(_:)))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        self.view.addGestureRecognizer(swipeLeft)
     }
 
     // MARK:- Update UI
@@ -75,7 +81,7 @@ class RouteDetailsViewController: UIViewController {
     
     @IBAction func switchToNextRoute(_ sender: Any) {
         
-        if currentSelectedRouteIndex  < routesArray.count {
+        if currentSelectedRouteIndex  < routesArray.count - 1 {
             
             currentSelectedRouteIndex = currentSelectedRouteIndex + 1
             adjustButtonsStatus()
