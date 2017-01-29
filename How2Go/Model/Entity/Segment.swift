@@ -31,7 +31,7 @@ struct Segment {
     var polyline: String? = nil
     var stops: [Stop] = []
     var isExpanded: Bool = false
-    var totalTime: String = ""
+    var totalTime: Float = 0.0
     
     static internal var dateFormatter: DateFormatter = DateFormatter()
     
@@ -52,15 +52,13 @@ struct Segment {
             segment.stops.append(Stop.createObject(fromData: stop))
         }
         
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         if let firstStopDate = dateFormatter.date(from: segment.stops[0].dateTime), let lastStopDate = dateFormatter.date(from: segment.stops[segment.stops.count - 1].dateTime){
-            let minutesDiff = (lastStopDate.timeIntervalSince(firstStopDate)) / 60.0;
-            segment.totalTime = String.init(format: "\(minutesDiff) minutes")
+            segment.totalTime = Float(lastStopDate.timeIntervalSince(firstStopDate)) / 60.0;            
         }
         
         return segment
-    }
-    
+    }        
 }
 
 // Private helpers

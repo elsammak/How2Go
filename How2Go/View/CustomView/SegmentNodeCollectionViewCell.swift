@@ -18,6 +18,7 @@ class SegmentNodeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var segmentName: UILabel!
     @IBOutlet weak var numberOfStops: UILabel!
     @IBOutlet weak var travelMode: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     var isExpanded: Bool = false
     var segment: Segment = Segment() {
         didSet {
@@ -45,6 +46,7 @@ class SegmentNodeCollectionViewCell: UICollectionViewCell {
             self.logoView.loadSVGImage(imageUrl: (self.segment.iconUrl))
         })
         segmentView.backgroundColor = UIColor(hexString: segment.color)
+        timeLabel.text = String.init(format: "\(segment.totalTime) minutes")
         
         leftLine.alpha = 1
         rightLine.alpha = 1

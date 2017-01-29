@@ -276,29 +276,25 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpR-BK-FgK" userLabel="Properties View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpR-BK-FgK" userLabel="Time View">
                                 <rect key="frame" x="254" y="369" width="80" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGT-vW-h5w">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-Ku-Eqy" userLabel="Time Label">
                                         <rect key="frame" x="5" y="5" width="70" height="70"/>
                                         <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="deviceRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                        <state key="normal" title="More">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="propertiesButtonPressed:" destination="VwU-a7-N0W" eventType="touchUpInside" id="1JZ-MH-GtQ"/>
-                                        </connections>
-                                    </button>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1641710069" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="fGT-vW-h5w" secondAttribute="trailing" constant="5" id="A5q-kg-7Fl"/>
-                                    <constraint firstItem="fGT-vW-h5w" firstAttribute="top" secondItem="tpR-BK-FgK" secondAttribute="top" constant="5" id="Iyx-IV-KTE"/>
+                                    <constraint firstAttribute="trailing" secondItem="hdc-Ku-Eqy" secondAttribute="trailing" constant="5" id="MdM-I0-1pG"/>
                                     <constraint firstAttribute="width" constant="80" id="PtD-Jh-6MT"/>
                                     <constraint firstAttribute="height" constant="80" id="Pxc-8k-iCw"/>
-                                    <constraint firstItem="fGT-vW-h5w" firstAttribute="leading" secondItem="tpR-BK-FgK" secondAttribute="leading" constant="5" id="UTG-6G-qTp"/>
-                                    <constraint firstAttribute="bottom" secondItem="fGT-vW-h5w" secondAttribute="bottom" constant="5" id="yT9-n5-4TD"/>
+                                    <constraint firstItem="hdc-Ku-Eqy" firstAttribute="leading" secondItem="tpR-BK-FgK" secondAttribute="leading" constant="5" id="Yxx-wJ-lPy"/>
+                                    <constraint firstAttribute="bottom" secondItem="hdc-Ku-Eqy" secondAttribute="bottom" constant="5" id="cAb-tk-ude"/>
+                                    <constraint firstItem="hdc-Ku-Eqy" firstAttribute="top" secondItem="tpR-BK-FgK" secondAttribute="top" constant="5" id="s7P-ZZ-QQm"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -379,6 +375,7 @@
                         <outlet property="providerLogo" destination="BVz-9R-nOq" id="DoM-wo-fS6"/>
                         <outlet property="segmentsLabel" destination="TJ6-Lw-fbD" id="Xgm-TP-YTK"/>
                         <outlet property="stopsLabel" destination="udT-RO-6IE" id="IFg-1m-b1Z"/>
+                        <outlet property="timeLabel" destination="hdc-Ku-Eqy" id="FBt-Hx-onI"/>
                         <outlet property="typeLabel" destination="v3k-Ry-ufA" id="GTw-tp-wAJ"/>
                     </connections>
                 </viewController>

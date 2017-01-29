@@ -91,20 +91,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pf1-nK-oJD" userLabel="Time label">
+                                <rect key="frame" x="2" y="132" width="96" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="Nr5-ad-19v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4Ds-Jt-Xaf" firstAttribute="leading" secondItem="3Xh-ac-rdf" secondAttribute="trailing" id="1Xx-k3-Yc1"/>
                             <constraint firstItem="3Xh-ac-rdf" firstAttribute="leading" secondItem="d6f-K4-war" secondAttribute="trailing" id="34h-4W-Hle"/>
+                            <constraint firstItem="Pf1-nK-oJD" firstAttribute="leading" secondItem="LEu-bb-7fS" secondAttribute="leading" constant="2" id="49k-9t-y3M"/>
                             <constraint firstItem="Lwl-5F-5b4" firstAttribute="top" secondItem="iAn-Ge-btQ" secondAttribute="bottom" constant="2" id="56a-VY-xoy"/>
                             <constraint firstAttribute="trailing" secondItem="iB7-2U-8Th" secondAttribute="trailing" constant="2" id="Dxk-f3-sGz"/>
                             <constraint firstItem="d6f-K4-war" firstAttribute="top" secondItem="LEu-bb-7fS" secondAttribute="top" constant="40" id="KHZ-Nc-cBu"/>
                             <constraint firstItem="4Ds-Jt-Xaf" firstAttribute="top" secondItem="LEu-bb-7fS" secondAttribute="top" constant="40" id="No2-dK-04R"/>
                             <constraint firstAttribute="trailing" secondItem="iAn-Ge-btQ" secondAttribute="trailing" constant="2" id="O3C-4a-lLL"/>
+                            <constraint firstItem="Pf1-nK-oJD" firstAttribute="top" secondItem="Lwl-5F-5b4" secondAttribute="bottom" constant="2" id="Okz-Dm-dSF"/>
                             <constraint firstItem="iAn-Ge-btQ" firstAttribute="top" secondItem="iB7-2U-8Th" secondAttribute="bottom" constant="2" id="UhT-Cc-CKx"/>
                             <constraint firstItem="Lwl-5F-5b4" firstAttribute="leading" secondItem="LEu-bb-7fS" secondAttribute="leading" constant="2" id="V3m-hZ-sKq"/>
                             <constraint firstItem="iAn-Ge-btQ" firstAttribute="leading" secondItem="LEu-bb-7fS" secondAttribute="leading" constant="2" id="j1F-0Q-4fx"/>
                             <constraint firstAttribute="trailing" secondItem="4Ds-Jt-Xaf" secondAttribute="trailing" id="ts6-wd-Msl"/>
+                            <constraint firstAttribute="trailing" secondItem="Pf1-nK-oJD" secondAttribute="trailing" constant="2" id="uPh-YF-kcI"/>
                             <constraint firstItem="3Xh-ac-rdf" firstAttribute="top" secondItem="LEu-bb-7fS" secondAttribute="top" constant="20" id="usE-QR-NUB"/>
                             <constraint firstItem="3Xh-ac-rdf" firstAttribute="centerX" secondItem="LEu-bb-7fS" secondAttribute="centerX" id="x8n-Uz-FO8"/>
                             <constraint firstAttribute="trailing" secondItem="Lwl-5F-5b4" secondAttribute="trailing" constant="2" id="xf3-3i-Vvx"/>
@@ -128,6 +140,7 @@
                 <outlet property="rightLine" destination="4Ds-Jt-Xaf" id="mH3-sq-Bjs"/>
                 <outlet property="segmentName" destination="iB7-2U-8Th" id="ByO-Gk-Aqs"/>
                 <outlet property="segmentView" destination="3Xh-ac-rdf" id="uPl-Et-gIq"/>
+                <outlet property="timeLabel" destination="Pf1-nK-oJD" id="phZ-2y-TrZ"/>
                 <outlet property="travelMode" destination="Lwl-5F-5b4" id="3hD-yw-xac"/>
             </connections>
         </collectionViewCell>

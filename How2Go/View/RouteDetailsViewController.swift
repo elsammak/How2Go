@@ -25,7 +25,7 @@ class RouteDetailsViewController: UIViewController {
     @IBOutlet weak var providerLogo: UIWebView!
     @IBOutlet weak var segmentsLabel: UILabel!
     @IBOutlet weak var stopsLabel: UILabel!
-    @IBOutlet weak var propertiesLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     var segmentsViewController: SegmentsViewController?
     var stopsViewController: StopsViewController?
@@ -74,7 +74,8 @@ class RouteDetailsViewController: UIViewController {
         if let stopsCount = currentRoute?.getNumberOfStops() {
             stopsLabel.text = String.init(format: "\(stopsCount) stops")
         }
-                
+       
+        timeLabel.text = currentRoute?.totalTime
     }
     
     // MARK:- IBAcions

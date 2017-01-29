@@ -15,7 +15,8 @@ public struct Route {
     var properties: Properties? = nil
     var segments: [Segment] = []
     var price: Price = Price()
-   
+    var totalTime: String = "0.0"
+    
     // MARK- Static methods
     static func createObject(fromData data: NSDictionary)-> [Route] {
         
@@ -43,9 +44,20 @@ public struct Route {
         
         
         let segments = data.value(forKey: "segments") as! [NSDictionary]
+        var time: Float = 0.0
         for segment in segments {
-            route.segments.append(Segment.createObject(fromData: segment))
+            let segment = Segment.createObject(fromData: segment)
+            route.segments.append(segment)
+            time = time + segment.totalTime
         }
+        
+        if time > 60 {
+            route.totalTime = String.init(format: "\(time / 60.0) hour")
+        }
+        else {
+            route.totalTime = String.init(format: "\(time) minutes")
+        }
+        
         
         return route
         
