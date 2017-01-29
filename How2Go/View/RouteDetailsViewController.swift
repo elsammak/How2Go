@@ -12,7 +12,7 @@ let segmentsSegue = "SegmentsSegue"
 let stopsSegue = "StopssSegue"
 
 protocol RouteDetailsDelegate {
-    func updateMapForCurrentRoute(currentRoute: Route)
+    func updateDataForCurrentRoute(currentRoute: Route, currentIndex: Int)
 }
 class RouteDetailsViewController: UIViewController {
 
@@ -58,7 +58,7 @@ class RouteDetailsViewController: UIViewController {
         
         currentRoute = routesArray[currentSelectedRouteIndex]
         
-        routeDetailsDelegate?.updateMapForCurrentRoute(currentRoute: currentRoute!)
+        routeDetailsDelegate?.updateDataForCurrentRoute(currentRoute: currentRoute!, currentIndex: currentSelectedRouteIndex)
         
         segmentsViewController?.segmentsArray = (currentRoute?.segments)!
         

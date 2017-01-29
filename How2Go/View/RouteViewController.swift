@@ -10,11 +10,10 @@ import UIKit
 import MapKit
 
 private let normalHeightConstraint: CGFloat = 168.0
-private let routeDetailsVCHeight: CGFloat = 469.0
-private let expandedHeightConstraint: CGFloat = UIScreen.main.bounds.height - 30.0
+private let expandedHeightConstraint: CGFloat = UIScreen.main.bounds.height - 30
 private let routeDetailsSegue = "RouteDetailsSegue"
 
-class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, RouteDetailsDelegate, UIScrollViewDelegate {
+class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, RouteDetailsDelegate {
 
     // Properties
     var isMapViewExpanded: Bool = false    
@@ -29,6 +28,8 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
     
     @IBOutlet weak var horizontalScrollView: UIScrollView!
     @IBOutlet weak var routeDetailsContainerHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var pageController: UIPageControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -77,6 +78,8 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
         }        
         // Update current details view
         routeDetailsViewController?.routesArray = routesArray
+        pageController.numberOfPages = routesArray.count
+        pageController.currentPage = (routeDetailsViewController?.currentSelectedRouteIndex)!
         
     }
     func updateUIWithError(error: Error) {
@@ -92,8 +95,11 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
     }
 
     // MARK:- RouteDetailsDelegate
-    func updateMapForCurrentRoute(currentRoute: Route) {
-                
+    func updateDataForCurrentRoute(currentRoute: Route, currentIndex: Int) {
+        
+        // Update PageController
+        pageController.currentPage = currentIndex
+        
         // Update map
          mapView.removeOverlays(mapView.overlays)
         
@@ -124,9 +130,5 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
         }
         
         return MKOverlayRenderer()
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("Scroll")
     }
 }
