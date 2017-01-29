@@ -97,10 +97,10 @@ class RouteDetailsViewController: UIViewController {
         let alert = UIAlertController(title: "Open itunes page",
                                       message: "Are your sure you want to open in itunes",
                                       preferredStyle: UIAlertControllerStyle.alert)
-//        alert.view.tintColor = UIColor.blueSystemColor()
+
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { _ in
             guard let url = URL(string: (self.currentRoute?.provider?.itunesUrl)!) else { return }
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)

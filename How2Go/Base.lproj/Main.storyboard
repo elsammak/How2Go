@@ -124,7 +124,7 @@
         <scene sceneID="byv-un-Yt8">
             <objects>
                 <navigationController navigationBarHidden="YES" id="aQb-Vv-WbH" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cbJ-B9-LA8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cbJ-B9-LA8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -324,16 +324,16 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="335-AX-cfo" userLabel="Segments Container View">
-                                <rect key="frame" x="10" y="279" width="355" height="80"/>
+                                <rect key="frame" x="10" y="263" width="355" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="5Vf-Yj-KF3"/>
+                                    <constraint firstAttribute="height" constant="130" id="5Vf-Yj-KF3"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="ELJ-Di-hbK" kind="embed" identifier="SegmentsSegue" id="qBQ-s3-orD"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bct-ah-XDi" userLabel="Stops Container View">
-                                <rect key="frame" x="10" y="379" width="355" height="80"/>
+                                <rect key="frame" x="10" y="398" width="355" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="vxW-LI-alt"/>
                                 </constraints>
@@ -375,10 +375,10 @@
                             <constraint firstItem="bct-ah-XDi" firstAttribute="leading" secondItem="ZTc-6c-cU4" secondAttribute="leading" constant="10" id="Dou-ZY-XD9"/>
                             <constraint firstItem="DVM-3j-BVA" firstAttribute="leading" secondItem="mKf-HS-tdc" secondAttribute="trailing" constant="26" id="EWl-oD-XXE"/>
                             <constraint firstItem="l1Q-8s-qqH" firstAttribute="top" secondItem="ZTc-6c-cU4" secondAttribute="top" constant="40" id="FMy-Wt-5af"/>
-                            <constraint firstItem="bct-ah-XDi" firstAttribute="top" secondItem="335-AX-cfo" secondAttribute="bottom" constant="20" id="Loy-TW-ovv"/>
+                            <constraint firstItem="bct-ah-XDi" firstAttribute="top" secondItem="335-AX-cfo" secondAttribute="bottom" constant="5" id="Loy-TW-ovv"/>
                             <constraint firstItem="7Gk-pt-zRI" firstAttribute="top" secondItem="ZTc-6c-cU4" secondAttribute="top" constant="40" id="Lp9-zw-KpD"/>
                             <constraint firstItem="JBV-iB-ohZ" firstAttribute="leading" secondItem="ZTc-6c-cU4" secondAttribute="leading" constant="10" id="Q3k-D3-ROL"/>
-                            <constraint firstItem="335-AX-cfo" firstAttribute="top" secondItem="JBV-iB-ohZ" secondAttribute="bottom" constant="26" id="QWn-X1-Jyx"/>
+                            <constraint firstItem="335-AX-cfo" firstAttribute="top" secondItem="JBV-iB-ohZ" secondAttribute="bottom" constant="10" id="QWn-X1-Jyx"/>
                             <constraint firstAttribute="trailing" secondItem="UbH-qh-JbN" secondAttribute="trailing" constant="2" id="Qvl-Hg-j2z"/>
                             <constraint firstAttribute="trailing" secondItem="335-AX-cfo" secondAttribute="trailing" constant="10" id="Vtd-Mo-nFv"/>
                             <constraint firstItem="UbH-qh-JbN" firstAttribute="top" secondItem="5Hy-sd-QYg" secondAttribute="bottom" constant="118" id="YRs-5z-bOe"/>
@@ -424,7 +424,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2jO-bY-9jI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2657" y="264"/>
+            <point key="canvasLocation" x="2657" y="305"/>
         </scene>
         <!--Segments View Controller-->
         <scene sceneID="J3y-s0-4bi">
@@ -435,26 +435,35 @@
                         <viewControllerLayoutGuide type="bottom" id="dE8-WA-WTD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TFj-do-Ynr">
-                        <rect key="frame" x="0.0" y="0.0" width="355" height="80"/>
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="130"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxV-Ft-vQo">
-                                <rect key="frame" x="0.0" y="0.0" width="355" height="80"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qud-ew-dty">
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="YLq-i4-zYV">
+                                    <size key="itemSize" width="100" height="130"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
                                 <connections>
-                                    <outlet property="delegate" destination="ELJ-Di-hbK" id="SXB-OQ-9Gu"/>
+                                    <outlet property="dataSource" destination="ELJ-Di-hbK" id="56O-h3-7aX"/>
+                                    <outlet property="delegate" destination="ELJ-Di-hbK" id="6Yq-Kw-k7k"/>
                                 </connections>
-                            </scrollView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rxV-Ft-vQo" firstAttribute="leading" secondItem="TFj-do-Ynr" secondAttribute="leading" id="1GQ-Pg-msT"/>
-                            <constraint firstItem="rxV-Ft-vQo" firstAttribute="top" secondItem="TFj-do-Ynr" secondAttribute="top" id="9Dy-uV-A7I"/>
-                            <constraint firstAttribute="bottom" secondItem="rxV-Ft-vQo" secondAttribute="bottom" id="Dzu-RK-193"/>
-                            <constraint firstAttribute="trailing" secondItem="rxV-Ft-vQo" secondAttribute="trailing" id="ztW-nm-T8y"/>
+                            <constraint firstAttribute="trailing" secondItem="Qud-ew-dty" secondAttribute="trailing" id="0zP-Mx-psx"/>
+                            <constraint firstItem="Qud-ew-dty" firstAttribute="leading" secondItem="TFj-do-Ynr" secondAttribute="leading" id="UVV-V9-2b8"/>
+                            <constraint firstItem="Qud-ew-dty" firstAttribute="top" secondItem="4aq-ca-X6q" secondAttribute="bottom" id="cX1-lc-Hrx"/>
+                            <constraint firstItem="dE8-WA-WTD" firstAttribute="top" secondItem="Qud-ew-dty" secondAttribute="bottom" id="vkU-7i-FFQ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="segmentsScrollView" destination="rxV-Ft-vQo" id="NLh-6Q-dc1"/>
+                        <outlet property="segmentsCollectionView" destination="Qud-ew-dty" id="soK-Im-qjq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DvV-6i-C0B" userLabel="First Responder" sceneMemberID="firstResponder"/>

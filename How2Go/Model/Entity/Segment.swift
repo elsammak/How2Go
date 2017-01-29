@@ -8,22 +8,22 @@
 /// Model class for Segment Object
 import Foundation
 
-enum TravelMode: Int {
-    case unknown
-    case walking
-    case subway
-    case bus
-    case change
-    case setup
-    case driving
-    case parking
-    case cycling    
+enum TravelMode: String {
+    case unknown = "--"
+    case walking = "Walking"
+    case subway = "Subway"
+    case bus = "Bus"
+    case change = "Change"
+    case setup = "Setup"
+    case driving = "Driving"
+    case parking = "Parking"
+    case cycling = "Cyclying"
 }
 struct Segment {
     
     // Properties
     var name: String? = nil
-    var numberOfStops: Float = 0.0
+    var numberOfStops: Int = 0
     var travelMode: TravelMode = .walking
     var description: String? = nil
     var color: String = ""
@@ -36,7 +36,7 @@ struct Segment {
         
         var segment = Segment()
         segment.name = data.value(forKey: "name") as? String
-        segment.numberOfStops = data.value(forKey: "num_stops") as! Float
+        segment.numberOfStops = data.value(forKey: "num_stops") as! Int
         segment.travelMode = parseTravelMode(string: data.value(forKey: "travel_mode") as! String)
         segment.description = data.value(forKey: "description") as? String
         segment.color = data.value(forKey: "color") as! String
