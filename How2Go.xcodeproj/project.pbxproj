@@ -34,6 +34,8 @@
 		A566752F1E3DE30200900B56 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566752E1E3DE30200900B56 /* UIColor+Extensions.swift */; };
 		A56675391E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56675371E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.swift */; };
 		A566753A1E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56675381E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.xib */; };
+		A5C49C8B1E3FBC7A00ED955E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C49C891E3FBC7A00ED955E /* Fabric.framework */; };
+		A5C49C8C1E3FBC7A00ED955E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C49C8A1E3FBC7A00ED955E /* Crashlytics.framework */; };
 		A5D901E61E3E1A0B00E4D130 /* StopNodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D901E41E3E1A0B00E4D130 /* StopNodeCollectionViewCell.swift */; };
 		A5D901E71E3E1A0B00E4D130 /* StopNodeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D901E51E3E1A0B00E4D130 /* StopNodeCollectionViewCell.xib */; };
 		A5FBDBBE1E3D235B006C3987 /* UIWebView+Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FBDBBD1E3D235B006C3987 /* UIWebView+Vector.swift */; };
@@ -96,6 +98,8 @@
 		A566752E1E3DE30200900B56 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		A56675371E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegmentNodeCollectionViewCell.swift; path = CustomView/SegmentNodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A56675381E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SegmentNodeCollectionViewCell.xib; path = CustomView/SegmentNodeCollectionViewCell.xib; sourceTree = "<group>"; };
+		A5C49C891E3FBC7A00ED955E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		A5C49C8A1E3FBC7A00ED955E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		A5D901E41E3E1A0B00E4D130 /* StopNodeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StopNodeCollectionViewCell.swift; path = CustomView/StopNodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5D901E51E3E1A0B00E4D130 /* StopNodeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StopNodeCollectionViewCell.xib; path = CustomView/StopNodeCollectionViewCell.xib; sourceTree = "<group>"; };
 		A5FBDBBD1E3D235B006C3987 /* UIWebView+Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Vector.swift"; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 			files = (
 				A55C0B2A1E3C75620092FD9C /* MapKit.framework in Frameworks */,
 				A25B77F4084B520231EFA4C0 /* Pods_How2Go.framework in Frameworks */,
+				A5C49C8C1E3FBC7A00ED955E /* Crashlytics.framework in Frameworks */,
+				A5C49C8B1E3FBC7A00ED955E /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +298,8 @@
 		E2866B86124BC672A24E3A8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5C49C891E3FBC7A00ED955E /* Fabric.framework */,
+				A5C49C8A1E3FBC7A00ED955E /* Crashlytics.framework */,
 				A55C0B291E3C75620092FD9C /* MapKit.framework */,
 				D780E0DA655E2D54C0F49489 /* Pods_How2Go.framework */,
 				3E206D83067FAEF2ABA90439 /* Pods_How2GoTests.framework */,
@@ -314,6 +322,7 @@
 				18138C3CD6730A27EFBA635D /* [CP] Embed Pods Frameworks */,
 				01066F3ED4EAE3B14C6ED18A /* [CP] Copy Pods Resources */,
 				A5C49C871E3FB3BF00ED955E /* ShellScript */,
+				A5C49C881E3FBC3B00ED955E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -565,6 +574,19 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		A5C49C881E3FBC3B00ED955E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 81e2a92f7bf5a56b7792769ba2e071f494657d41 730c00788d0953e6bfab004f87d52932add5b7fff40bc633d799b438541c8c80";
+		};
 		DD39DBADEB8537D3B57A90F5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -761,6 +783,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VD99NBZ76D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = How2Go/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elsammak.How2Go;
@@ -778,6 +804,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VD99NBZ76D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = How2Go/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elsammak.How2Go;
