@@ -28,9 +28,31 @@ class How2GoUITests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
+    func testUIData() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        
+        let scrollViewsQuery = XCUIApplication().scrollViews
+        let button = scrollViewsQuery.children(matching: .other).element.children(matching: .other).element.children(matching: .button).element(boundBy: 1)
+        
+        // Tap the right button twice "i.e navigate to 3rd route"
+        button.tap()
+        button.tap()
+        
+        // Swipe transit line till the end
+        let collectionViewsQuery = scrollViewsQuery.otherElements.collectionViews
+        collectionViewsQuery.children(matching: .cell).element(boundBy: 1).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+        collectionViewsQuery.children(matching: .cell).element(boundBy: 2).children(matching: .other).element.children(matching: .other).element.swipeLeft()
+        collectionViewsQuery.children(matching: .cell).element(boundBy: 3).children(matching: .other).element.children(matching: .other).element.swipeLeft()
+
+        // Check for stop name
+        XCTAssert(app.staticTexts["U Mohrenstr."].exists)
+        
+        // Check for number of stops in RouteDetailsViewController
+        XCTAssert(app.staticTexts["11 stops"].exists)
+        
     }
 
 }
