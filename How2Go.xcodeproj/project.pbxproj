@@ -30,14 +30,12 @@
 		A55C0B2A1E3C75620092FD9C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55C0B291E3C75620092FD9C /* MapKit.framework */; };
 		A55C0B2C1E3C761A0092FD9C /* RouteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */; };
 		A55C0B2E1E3C790F0092FD9C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B2D1E3C790F0092FD9C /* UIView+Extensions.swift */; };
-		A55C0B3F1E3C9AA50092FD9C /* SegmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B3D1E3C9AA50092FD9C /* SegmentsViewController.swift */; };
-		A55C0B431E3C9AB30092FD9C /* StopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B411E3C9AB30092FD9C /* StopsViewController.swift */; };
+		A55C0B3F1E3C9AA50092FD9C /* TransitLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B3D1E3C9AA50092FD9C /* TransitLineViewController.swift */; };
 		A566752F1E3DE30200900B56 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566752E1E3DE30200900B56 /* UIColor+Extensions.swift */; };
 		A56675391E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56675371E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.swift */; };
 		A566753A1E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56675381E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.xib */; };
 		A5D901E61E3E1A0B00E4D130 /* StopNodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D901E41E3E1A0B00E4D130 /* StopNodeCollectionViewCell.swift */; };
 		A5D901E71E3E1A0B00E4D130 /* StopNodeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D901E51E3E1A0B00E4D130 /* StopNodeCollectionViewCell.xib */; };
-		A5D901E91E3E3CF000E4D130 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D901E81E3E3CF000E4D130 /* String+Extensions.swift */; };
 		A5FBDBBE1E3D235B006C3987 /* UIWebView+Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FBDBBD1E3D235B006C3987 /* UIWebView+Vector.swift */; };
 		A5FBDBC21E3D3385006C3987 /* MKPolyline+MKPolyline_EncodedString.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FBDBC11E3D3385006C3987 /* MKPolyline+MKPolyline_EncodedString.m */; };
 		F86280533397F30487AB6543 /* Pods_How2GoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A1859970136CF799434307 /* Pods_How2GoUITests.framework */; };
@@ -94,14 +92,12 @@
 		A55C0B291E3C75620092FD9C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDetailsViewController.swift; sourceTree = "<group>"; };
 		A55C0B2D1E3C790F0092FD9C /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		A55C0B3D1E3C9AA50092FD9C /* SegmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentsViewController.swift; sourceTree = "<group>"; };
-		A55C0B411E3C9AB30092FD9C /* StopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopsViewController.swift; sourceTree = "<group>"; };
+		A55C0B3D1E3C9AA50092FD9C /* TransitLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitLineViewController.swift; sourceTree = "<group>"; };
 		A566752E1E3DE30200900B56 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		A56675371E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegmentNodeCollectionViewCell.swift; path = CustomView/SegmentNodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A56675381E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SegmentNodeCollectionViewCell.xib; path = CustomView/SegmentNodeCollectionViewCell.xib; sourceTree = "<group>"; };
 		A5D901E41E3E1A0B00E4D130 /* StopNodeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StopNodeCollectionViewCell.swift; path = CustomView/StopNodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5D901E51E3E1A0B00E4D130 /* StopNodeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StopNodeCollectionViewCell.xib; path = CustomView/StopNodeCollectionViewCell.xib; sourceTree = "<group>"; };
-		A5D901E81E3E3CF000E4D130 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		A5FBDBBD1E3D235B006C3987 /* UIWebView+Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Vector.swift"; sourceTree = "<group>"; };
 		A5FBDBBF1E3D3385006C3987 /* How2Go-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "How2Go-Bridging-Header.h"; sourceTree = "<group>"; };
 		A5FBDBC01E3D3385006C3987 /* MKPolyline+MKPolyline_EncodedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKPolyline+MKPolyline_EncodedString.h"; sourceTree = "<group>"; };
@@ -183,7 +179,6 @@
 				A55C0B031E3B26E30092FD9C /* Model */,
 				A55C0B041E3B26E30092FD9C /* Common */,
 				A55C0AD51E3B23E00092FD9C /* AppDelegate.swift */,
-				A55C0AD91E3B23E00092FD9C /* Main.storyboard */,
 				A55C0ADC1E3B23E00092FD9C /* Assets.xcassets */,
 				A55C0ADE1E3B23E00092FD9C /* LaunchScreen.storyboard */,
 				A55C0AE11E3B23E00092FD9C /* Info.plist */,
@@ -228,7 +223,6 @@
 				A5FBDBC11E3D3385006C3987 /* MKPolyline+MKPolyline_EncodedString.m */,
 				A5FBDBBF1E3D3385006C3987 /* How2Go-Bridging-Header.h */,
 				A566752E1E3DE30200900B56 /* UIColor+Extensions.swift */,
-				A5D901E81E3E3CF000E4D130 /* String+Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -239,6 +233,7 @@
 				A55C0B341E3C84200092FD9C /* CustomView */,
 				A55C0B2F1E3C83E90092FD9C /* ViewControllers */,
 				A55C0B271E3C712D0092FD9C /* MainRouter.swift */,
+				A55C0AD91E3B23E00092FD9C /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,8 +273,7 @@
 				A55C0B1F1E3B92420092FD9C /* ViewController.swift */,
 				A55C0B251E3C706D0092FD9C /* RouteViewController.swift */,
 				A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */,
-				A55C0B3D1E3C9AA50092FD9C /* SegmentsViewController.swift */,
-				A55C0B411E3C9AB30092FD9C /* StopsViewController.swift */,
+				A55C0B3D1E3C9AA50092FD9C /* TransitLineViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -580,12 +574,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5D901E61E3E1A0B00E4D130 /* StopNodeCollectionViewCell.swift in Sources */,
-				A55C0B3F1E3C9AA50092FD9C /* SegmentsViewController.swift in Sources */,
+				A55C0B3F1E3C9AA50092FD9C /* TransitLineViewController.swift in Sources */,
 				A55C0B201E3B92420092FD9C /* ViewController.swift in Sources */,
 				A55C0B101E3B46620092FD9C /* RoutesViewModel.swift in Sources */,
 				A55C0B2C1E3C761A0092FD9C /* RouteDetailsViewController.swift in Sources */,
 				A55C0B261E3C706D0092FD9C /* RouteViewController.swift in Sources */,
-				A55C0B431E3C9AB30092FD9C /* StopsViewController.swift in Sources */,
 				A55C0B1A1E3B4C120092FD9C /* Segment.swift in Sources */,
 				A5FBDBC21E3D3385006C3987 /* MKPolyline+MKPolyline_EncodedString.m in Sources */,
 				A55C0AD61E3B23E00092FD9C /* AppDelegate.swift in Sources */,
@@ -598,7 +591,6 @@
 				A55C0B1E1E3B862F0092FD9C /* Properties.swift in Sources */,
 				A56675391E3DFD4C00900B56 /* SegmentNodeCollectionViewCell.swift in Sources */,
 				A55C0B2E1E3C790F0092FD9C /* UIView+Extensions.swift in Sources */,
-				A5D901E91E3E3CF000E4D130 /* String+Extensions.swift in Sources */,
 				A566752F1E3DE30200900B56 /* UIColor+Extensions.swift in Sources */,
 				A55C0B221E3B957B0092FD9C /* Provider.swift in Sources */,
 				A55C0B0C1E3B45B30092FD9C /* Constants.swift in Sources */,
@@ -643,6 +635,7 @@
 				A55C0ADA1E3B23E00092FD9C /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A55C0ADE1E3B23E00092FD9C /* LaunchScreen.storyboard */ = {

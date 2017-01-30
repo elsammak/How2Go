@@ -5,7 +5,7 @@
 //  Created by Mohammed Elsammak on 1/28/17.
 //  Copyright © 2017 How2Go. All rights reserved.
 //
-
+/// Extensions to UIView class
 import UIKit
 @IBDesignable extension UIView {
     @IBInspectable var borderColor: UIColor? {

@@ -104,7 +104,7 @@
                                 </connections>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="dfV-za-f2S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0S7-cD-OLm"/>
                             <constraint firstItem="8MA-ej-PjM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="31G-Jh-9dl"/>
@@ -124,7 +124,6 @@
                         <outlet property="mapHeightConstraint" destination="DUm-Z3-hzf" id="0Dt-iw-7Sr"/>
                         <outlet property="mapView" destination="dfV-za-f2S" id="SF1-2S-zJ2"/>
                         <outlet property="pageController" destination="7OP-T3-aL4" id="Iu9-yj-Flx"/>
-                        <outlet property="routeDetailsContainerHeightConstraint" destination="Q6f-wR-ieY" id="tni-Rd-7hB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -135,7 +134,7 @@
         <scene sceneID="byv-un-Yt8">
             <objects>
                 <navigationController navigationBarHidden="YES" id="aQb-Vv-WbH" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cbJ-B9-LA8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cbJ-B9-LA8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -165,7 +164,7 @@
                                     <constraint firstAttribute="height" constant="160" id="5Vf-Yj-KF3"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="ELJ-Di-hbK" kind="embed" identifier="SegmentsSegue" id="qBQ-s3-orD"/>
+                                    <segue destination="ELJ-Di-hbK" kind="embed" identifier="TransitLineSegue" id="qBQ-s3-orD"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gk-pt-zRI" userLabel="Type View">
@@ -404,10 +403,10 @@
             </objects>
             <point key="canvasLocation" x="1893.5999999999999" y="80.50974512743629"/>
         </scene>
-        <!--Segments View Controller-->
+        <!--Transit Line View Controller-->
         <scene sceneID="J3y-s0-4bi">
             <objects>
-                <viewController id="ELJ-Di-hbK" customClass="SegmentsViewController" customModule="How2Go" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ELJ-Di-hbK" customClass="TransitLineViewController" customModule="How2Go" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4aq-ca-X6q"/>
                         <viewControllerLayoutGuide type="bottom" id="dE8-WA-WTD"/>
@@ -441,7 +440,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="segmentsCollectionView" destination="Qud-ew-dty" id="soK-Im-qjq"/>
+                        <outlet property="transitLineCollectionView" destination="Qud-ew-dty" id="HDx-QB-IDj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DvV-6i-C0B" userLabel="First Responder" sceneMemberID="firstResponder"/>

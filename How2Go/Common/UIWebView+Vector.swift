@@ -5,7 +5,7 @@
 //  Created by Mohammed Elsammak on 1/28/17.
 //  Copyright © 2017 How2Go. All rights reserved.
 //
-
+/// Display vector images in UIWebView objects.
 import Foundation
 import UIKit
 extension UIWebView {

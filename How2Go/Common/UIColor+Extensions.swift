@@ -5,7 +5,7 @@
 //  Created by Mohammed Elsammak on 1/29/17.
 //  Copyright © 2017 How2Go. All rights reserved.
 //
-
+/// Initiate UIColor object from hex string
 import Foundation
 extension UIColor {
     

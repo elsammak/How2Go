@@ -5,11 +5,10 @@
 //  Created by Mohammed Elsammak on 1/28/17.
 //  Copyright © 2017 How2Go. All rights reserved.
 //
-
+/// Represent all details of a single route. 
 import UIKit
 
-let segmentsSegue = "SegmentsSegue"
-let stopsSegue = "StopssSegue"
+let transitLineSegue = "TransitLineSegue"
 
 protocol RouteDetailsDelegate {
     func updateDataForCurrentRoute(currentRoute: Route, currentIndex: Int)
@@ -19,7 +18,6 @@ class RouteDetailsViewController: UIViewController {
     // IBOutlets
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
-    
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var providerLogo: UIWebView!
@@ -27,8 +25,8 @@ class RouteDetailsViewController: UIViewController {
     @IBOutlet weak var stopsLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    var segmentsViewController: SegmentsViewController?
-    var stopsViewController: StopsViewController?
+    // Properties
+    var transitLineViewController: TransitLineViewController?
     var routeDetailsDelegate: RouteDetailsDelegate? = nil
     var currentSelectedRouteIndex: Int = 0
     var currentRoute: Route? = nil
@@ -41,6 +39,7 @@ class RouteDetailsViewController: UIViewController {
         }
     }
     
+    // MARK:- Inits
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,7 +59,7 @@ class RouteDetailsViewController: UIViewController {
         
         routeDetailsDelegate?.updateDataForCurrentRoute(currentRoute: currentRoute!, currentIndex: currentSelectedRouteIndex)
         
-        segmentsViewController?.segmentsArray = (currentRoute?.segments)!
+        transitLineViewController?.segmentsArray = (currentRoute?.segments)!
         
         typeLabel.text = (currentRoute?.type).map { $0.rawValue }
         priceLabel.text = currentRoute?.price.getFormatValue()
@@ -79,7 +78,6 @@ class RouteDetailsViewController: UIViewController {
     }
     
     // MARK:- IBAcions
-    
     @IBAction func switchToNextRoute(_ sender: Any) {
         
         if currentSelectedRouteIndex  < routesArray.count - 1 {
@@ -90,7 +88,6 @@ class RouteDetailsViewController: UIViewController {
         }
         
     }
-    
     @IBAction func switchToPreviousRoute(_ sender: Any) {
         
         if currentSelectedRouteIndex > 0 {
@@ -112,26 +109,17 @@ class RouteDetailsViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
-    @IBAction func propertiesButtonPressed(_ sender: Any) {
-        
-    }
-
     // MARK:- Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == segmentsSegue {
+        if segue.identifier == transitLineSegue {
             
-            segmentsViewController = segue.destination as? SegmentsViewController
-        }
-        else if segue.identifier == stopsSegue {
-            stopsViewController = segue.destination as? StopsViewController
+            transitLineViewController = segue.destination as? TransitLineViewController
         }
     }
 
-    fileprivate func adjustButtonsStatus() {
+    // MARK:- Private helpers
+    private func adjustButtonsStatus() {
         
         if currentSelectedRouteIndex + 1 >= routesArray.count {
             nextButton.isEnabled = false

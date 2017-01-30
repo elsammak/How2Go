@@ -5,19 +5,18 @@
 //  Created by Mohammed Elsammak on 1/27/17.
 //  Copyright © 2017 How2Go. All rights reserved.
 //
-
+/// Model class for Provider object
 import Foundation
 public struct Provider {
     
+    // Properties
     var providerIconUrl: String? = nil
     var disclaimer: String? = nil
     var displayName: String? = nil
     var itunesUrl: String? = nil
     
     static func createObject(fromData data: NSDictionary)-> [Provider] {
-        
-        
-        
+
         let values = data.value(forKey: "provider_attributes") as! [NSDictionary]
         
         var providersArray: [Provider] = []

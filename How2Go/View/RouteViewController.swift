@@ -5,11 +5,13 @@
 //  Created by Mohammed Elsammak on 1/28/17.
 //  Copyright © 2017 How2Go. All rights reserved.
 //
-
+/// Main class represents all Route data includes Map and route details.
 import UIKit
 import MapKit
 
+// Class constants
 private let normalHeightConstraint: CGFloat = 168.0
+private let scrollViewContentHeight: CGFloat = 469.0
 private let expandedHeightConstraint: CGFloat = UIScreen.main.bounds.height - 30
 private let routeDetailsSegue = "RouteDetailsSegue"
 
@@ -19,17 +21,16 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
     var isMapViewExpanded: Bool = false    
     var routeDetailsViewController: RouteDetailsViewController?
     
-    //ViewModel
+    // ViewModel
     var viewModel: RoutesViewModel = RoutesViewModel()
     
-    //IBoutlets
+    // IBoutlets
     @IBOutlet weak var mapHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var mapView: MKMapView!
-    
     @IBOutlet weak var horizontalScrollView: UIScrollView!
-    @IBOutlet weak var routeDetailsContainerHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var pageController: UIPageControl!
+    
+    // MARK:- Inits
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,8 +40,7 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        horizontalScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 469)
-        routeDetailsContainerHeightConstraint.constant = 469
+        horizontalScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: scrollViewContentHeight)
     }
  
     // MARK:- IBActions
@@ -103,13 +103,14 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
         // Update map
          mapView.removeOverlays(mapView.overlays)
         
-        //Draw route
+        // Draw route
         for segment in currentRoute.segments {
             if let polyline = MKPolyline(encodedString: segment.polyline){
                 self.mapView.add(polyline, level: MKOverlayLevel.aboveRoads)
             }
         }
-        //Focus map
+        
+        // Focus map
         if let first = mapView.overlays.first {
             let rect = mapView.overlays.reduce(first.boundingMapRect, {MKMapRectUnion($0, $1.boundingMapRect)})
             mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0), animated: true)

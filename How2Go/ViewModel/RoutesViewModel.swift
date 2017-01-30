@@ -15,7 +15,6 @@ protocol RoutesDelegate {
 class RoutesViewModel {
     
     public var delegate: RoutesDelegate!
-    
     private let apiClient: APIClient!
     
     // MARK:- Init
@@ -23,6 +22,7 @@ class RoutesViewModel {
         apiClient = APIClient()
     }
     
+    // MARK:- API methods
     func getRouteData() {
         apiClient.getRoutes { [unowned self ](data, error) in
             if let error = error { // Error occured
