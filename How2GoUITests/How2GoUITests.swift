@@ -5,7 +5,7 @@
 //  Created by Mohammed Elsammak on 1/27/17.
 //  Copyright © 2017 How2Go. All rights reserved.
 //
-
+// swiftlint:disable line_length
 import XCTest
 
 class How2GoUITests: XCTestCase {
@@ -31,16 +31,16 @@ class How2GoUITests: XCTestCase {
     func testUIData() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
+
         let app = XCUIApplication()
-        
+
         let scrollViewsQuery = XCUIApplication().scrollViews
         let button = scrollViewsQuery.children(matching: .other).element.children(matching: .other).element.children(matching: .button).element(boundBy: 1)
-        
+
         // Tap the right button twice "i.e navigate to 3rd route"
         button.tap()
         button.tap()
-        
+
         // Swipe transit line till the end
         let collectionViewsQuery = scrollViewsQuery.otherElements.collectionViews
         collectionViewsQuery.children(matching: .cell).element(boundBy: 1).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
@@ -49,10 +49,10 @@ class How2GoUITests: XCTestCase {
 
         // Check for stop name
         XCTAssert(app.staticTexts["U Mohrenstr."].exists)
-        
+
         // Check for number of stops in RouteDetailsViewController
         XCTAssert(app.staticTexts["11 stops"].exists)
-        
+
     }
 
 }

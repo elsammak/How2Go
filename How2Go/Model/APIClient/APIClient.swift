@@ -17,13 +17,12 @@ class APIClient {
      
      - returns: NSDictionary as response or error.
      */
-   open func getRoutes(_ completion: @escaping completion) {
+   open func getRoutes(_ completion: @escaping Completion) {
         Alamofire.request(serverURL).responseJSON { response in
-  
+
             if let JSON = response.result.value {
                 completion( Route.createObject(fromData: (JSON as! NSDictionary)), nil)
-            }
-            else {
+            } else {
                 completion(nil, response.error)
             }
         }

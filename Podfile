@@ -7,6 +7,7 @@ target 'How2Go' do
 
   # Pods for How2Go
   pod 'Alamofire'    
+  pod 'SwiftLint'
 
   target 'How2GoTests' do
     inherit! :search_paths

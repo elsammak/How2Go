@@ -8,16 +8,16 @@
 /// Model class for stop object
 import Foundation
 struct Stop {
-    
+
     // Properties
     var lat: Double = 0.0
     var lon: Double = 0.0
     var dateTime: String = ""
     var name: String? = nil
     var properties: String? = nil
-    
-    static func createObject(fromData data: NSDictionary)-> Stop {
-        
+
+    static func createObject(fromData data: NSDictionary) -> Stop {
+
         var stop = Stop()
         stop.lat = data.value(forKey: "lat") as! Double
         stop.lon = data.value(forKey: "lng") as! Double

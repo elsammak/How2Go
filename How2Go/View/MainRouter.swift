@@ -10,16 +10,16 @@ import UIKit
 
 class MainRouter {
     static func instantiateRouteViewController() -> RouteViewController {
-        
+
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RouteViewController") as! RouteViewController
-        
+
         return viewController
     }
-    
+
     static func instantiateRouteDetailsViewController() -> RouteViewController {
-        
+
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RouteDetailsViewController") as! RouteViewController
-        
+
         return viewController
     }
 }

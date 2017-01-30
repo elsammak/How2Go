@@ -14,28 +14,28 @@ class StopNodeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var stopNameLabel: UILabel!
     @IBOutlet weak var rightLine: UIView!
     @IBOutlet weak var leftLine: UIView!
-    
+
     // Properties
     var stop: Stop = Stop() {
         didSet {
             updateUI()
         }
     }
-    
-    // MARK:- Inits
+
+    // MARK: - Inits
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         stopNameLabel.transform = CGAffineTransform(rotationAngle: CGFloat(70.0))
     }
-    
-    // MARK:- Update UI methods
+
+    // MARK: - Update UI methods
     func updateUI() {
-        
+
         stopNameLabel.text = stop.name
         leftLine.alpha = 1
         rightLine.alpha = 1
-    }    
+    }
     func removeFirstLine() {
         leftLine.alpha = 0
     }

@@ -9,4 +9,4 @@
 import Foundation
 
 public let serverURL = "https://raw.githubusercontent.com/door2door-io/transit-app-task/master/data.json"
-typealias completion = ([Route]?, Error?) -> Void
+typealias Completion = ([Route]?, Error?) -> Void

@@ -12,7 +12,7 @@ class LoadingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let viewController = MainRouter.instantiateRouteViewController()
         self.navigationController?.pushViewController(viewController, animated: false)
     }

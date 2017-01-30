@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 extension UIWebView {
-    
+
     func loadSVGImage(imageUrl: String) {
         let html = String.init(format: "<!DOCTYPE html>" +
             "<html>" +
@@ -28,7 +28,7 @@ extension UIWebView {
             "</style>" +
             "</head>" +
             "<img src='\(imageUrl)'/> </body></html>")
-  
+
         self.loadHTMLString(html, baseURL: nil)
 
     }

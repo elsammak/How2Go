@@ -8,7 +8,7 @@
 /// Model class for Route object
 import Foundation
 public struct Route {
-   
+
     // Properties
     var type: RouteType = .none
     var provider: Provider? = Provider()
@@ -16,10 +16,10 @@ public struct Route {
     var segments: [Segment] = []
     var price: Price = Price()
     var totalTime: String = "0.0"
-    
+
     // MARK- Static methods
-    static func createObject(fromData data: NSDictionary)-> [Route] {
-        
+    static func createObject(fromData data: NSDictionary) -> [Route] {
+
         ProviderManager.sharedInstance.parseProvidersResponse(fromData: data.value(forKey: "provider_attributes") as! NSDictionary)
         let routes = data.value(forKey: "routes") as! [NSDictionary]
         var routesArray: [Route] = []
@@ -28,21 +28,20 @@ public struct Route {
         }
         return routesArray
     }
-    
-    static func createObject(fromData data: NSDictionary)-> Route {
-        
+
+    static func createObject(fromData data: NSDictionary) -> Route {
+
         var route = Route()
         route.type = parseRouteType(type: data.value(forKey: "type") as! String)
         route.provider = ProviderManager.sharedInstance.getProvider(forProviderName: data.value(forKey: "provider") as! String)
         if let propertiesData = data.value(forKey: "properties") as? NSDictionary {
             route.properties = Properties.createObject(fromData: propertiesData, ofType: route.type)
         }
-        
-        if let priceData = data.value(forKey: "price") as? NSDictionary {            
+
+        if let priceData = data.value(forKey: "price") as? NSDictionary {
             route.price = Price.createObject(fromData: priceData)
         }
-        
-        
+
         let segments = data.value(forKey: "segments") as! [NSDictionary]
         var time: Float = 0.0
         for segment in segments {
@@ -50,41 +49,38 @@ public struct Route {
             route.segments.append(segment)
             time = time + segment.totalTime
         }
-        
+
         if time > 60 {
             route.totalTime = String.init(format: "\(time / 60.0) hour")
-        }
-        else {
+        } else {
             route.totalTime = String.init(format: "\(time) minutes")
         }
-        
-        
+
         return route
-        
+
     }
-    
-    // MARK:- Public structs
+
+    // MARK: - Public structs
     public struct Price {
         var currency: String = "EUR"
         var amount: Float = 0.0
-        
-        static func createObject(fromData data: NSDictionary)-> Price {
-            
+
+        static func createObject(fromData data: NSDictionary) -> Price {
+
             var price = Price()
             price.currency = data.value(forKey: "currency") as! String
             price.amount = data.value(forKey: "amount") as! Float
-            
+
             return price
-            
+
         }
-        
-        func getFormatValue()-> String {
+
+        func getFormatValue() -> String {
             return String(format: "%0.2f €", self.amount)
         }
     }
-    
-    
-    public func getNumberOfStops()-> Int {
+
+    public func getNumberOfStops() -> Int {
         var stopsCount = 0
         for segment in segments {
             stopsCount += segment.stops.count
@@ -93,8 +89,8 @@ public struct Route {
     }
 }
 
-// MARK:- Private helpers
-fileprivate func parseRouteType(type: String)-> RouteType {
+// MARK: - Private helpers
+fileprivate func parseRouteType(type: String) -> RouteType {
     switch type {
     case "public_transport":
         return .public_transport

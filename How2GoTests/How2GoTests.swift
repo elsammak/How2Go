@@ -18,26 +18,26 @@ class How2GoTests: XCTestCase {
 
     func testRoutesArray() {
         let apiClient = APIClient()
-        
+
         let asyncApiCallExpectation = self.expectation(description: "asyncApiCallExpectation")
-        
+
         apiClient.getRoutes { (routesArray, error) in
-            
+
             XCTAssertNotNil(routesArray)
             XCTAssertEqual(routesArray?.count, 9, "Total number of items = \(routesArray?.count)")
             guard let array = routesArray else { return }
-        
+
             let seventhRoute: Route = array[7]
-            
+
             XCTAssertEqual(seventhRoute.type, .bike_sharing, "Seventh route type: \(seventhRoute.type)")
             XCTAssertEqual(seventhRoute.provider?.displayName, "Call a Bike", "Seventh route Provider name: \(seventhRoute.provider?.displayName)")
             XCTAssertEqual(seventhRoute.segments.count, 5, "Seventh route segments count: \(seventhRoute.segments.count)")
             XCTAssertEqual(seventhRoute.price.amount, 120, "Seventh route price: \(seventhRoute.price.amount)")
             let properties = seventhRoute.properties as? BikeSharingProperties
             XCTAssertEqual(properties?.availableBikes, 11, "Available bikes: \(properties?.availableBikes)")
-            
+
             XCTAssertNil(error)
-            
+
             asyncApiCallExpectation.fulfill()
         }
 
@@ -47,5 +47,4 @@ class How2GoTests: XCTestCase {
 
     }
 
-    
 }

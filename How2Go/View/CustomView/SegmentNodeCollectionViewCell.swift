@@ -19,7 +19,7 @@ class SegmentNodeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var numberOfStops: UILabel!
     @IBOutlet weak var travelMode: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    
+
     // Properties
     var isExpanded: Bool = false
     var segment: Segment = Segment() {
@@ -32,28 +32,28 @@ class SegmentNodeCollectionViewCell: UICollectionViewCell {
             self.backgroundColor = UIColor.brown
         }
     }
-    
-    // MARK:- Inits
+
+    // MARK: - Inits
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    // MARK:- Update UI method
+
+    // MARK: - Update UI method
     func updateUI() {
         segmentName.text = segment.name
         numberOfStops.text = String.init(format: "\(segment.numberOfStops) stops")
         travelMode.text = segment.travelMode.rawValue
-        
+
         DispatchQueue.main.async(execute: {
             self.logoView.loadSVGImage(imageUrl: (self.segment.iconUrl))
         })
         segmentView.backgroundColor = UIColor(hexString: segment.color)
         timeLabel.text = String.init(format: "\(segment.totalTime) minutes")
-        
+
         leftLine.alpha = 1
         rightLine.alpha = 1
-        
+
     }
     func removeFirstLine() {
         leftLine.alpha = 0
