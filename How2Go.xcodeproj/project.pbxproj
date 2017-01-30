@@ -22,7 +22,7 @@
 		A55C0B1A1E3B4C120092FD9C /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B191E3B4C120092FD9C /* Segment.swift */; };
 		A55C0B1C1E3B4C2B0092FD9C /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B1B1E3B4C2B0092FD9C /* Stop.swift */; };
 		A55C0B1E1E3B862F0092FD9C /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B1D1E3B862F0092FD9C /* Properties.swift */; };
-		A55C0B201E3B92420092FD9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B1F1E3B92420092FD9C /* ViewController.swift */; };
+		A55C0B201E3B92420092FD9C /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B1F1E3B92420092FD9C /* LoadingViewController.swift */; };
 		A55C0B221E3B957B0092FD9C /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B211E3B957B0092FD9C /* Provider.swift */; };
 		A55C0B241E3B99500092FD9C /* ProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B231E3B99500092FD9C /* ProviderManager.swift */; };
 		A55C0B261E3C706D0092FD9C /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0B251E3C706D0092FD9C /* RouteViewController.swift */; };
@@ -84,7 +84,7 @@
 		A55C0B191E3B4C120092FD9C /* Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 		A55C0B1B1E3B4C2B0092FD9C /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		A55C0B1D1E3B862F0092FD9C /* Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
-		A55C0B1F1E3B92420092FD9C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A55C0B1F1E3B92420092FD9C /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		A55C0B211E3B957B0092FD9C /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		A55C0B231E3B99500092FD9C /* ProviderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderManager.swift; sourceTree = "<group>"; };
 		A55C0B251E3C706D0092FD9C /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 		A55C0B2F1E3C83E90092FD9C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A55C0B1F1E3B92420092FD9C /* ViewController.swift */,
+				A55C0B1F1E3B92420092FD9C /* LoadingViewController.swift */,
 				A55C0B251E3C706D0092FD9C /* RouteViewController.swift */,
 				A55C0B2B1E3C761A0092FD9C /* RouteDetailsViewController.swift */,
 				A55C0B3D1E3C9AA50092FD9C /* TransitLineViewController.swift */,
@@ -575,7 +575,7 @@
 			files = (
 				A5D901E61E3E1A0B00E4D130 /* StopNodeCollectionViewCell.swift in Sources */,
 				A55C0B3F1E3C9AA50092FD9C /* TransitLineViewController.swift in Sources */,
-				A55C0B201E3B92420092FD9C /* ViewController.swift in Sources */,
+				A55C0B201E3B92420092FD9C /* LoadingViewController.swift in Sources */,
 				A55C0B101E3B46620092FD9C /* RoutesViewModel.swift in Sources */,
 				A55C0B2C1E3C761A0092FD9C /* RouteDetailsViewController.swift in Sources */,
 				A55C0B261E3C706D0092FD9C /* RouteViewController.swift in Sources */,

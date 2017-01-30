@@ -29,6 +29,7 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var horizontalScrollView: UIScrollView!
     @IBOutlet weak var pageController: UIPageControl!
+    @IBOutlet weak var loadingView: UIView!
     
     // MARK:- Inits
     override func viewDidLoad() {
@@ -75,7 +76,12 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
     func updateUIWithData(routes: [Route]?) {
         guard let routesArray = routes else {
             return
-        }        
+        }
+        
+        // Hide loading view
+        UIView.animate(withDuration: 0.5, animations: {
+            self.loadingView.alpha = 0
+        })
         // Update current details view
         routeDetailsViewController?.routesArray = routesArray
         pageController.numberOfPages = routesArray.count

@@ -9,25 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="udw-wG-Mo6">
-            <objects>
-                <viewController id="igT-pY-uXI" customClass="ViewController" customModule="How2Go" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ByZ-uL-dYF"/>
-                        <viewControllerLayoutGuide type="bottom" id="qTM-ru-bAg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Olh-Zc-CmP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="hXf-aP-9Ia"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g1h-3m-akA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="352" y="-21"/>
-        </scene>
         <!--Route View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -103,24 +84,51 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="pWV-vU-TfI"/>
                                 </connections>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHc-Nl-cAO" userLabel="Loading View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="x78-VC-G80">
+                                        <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retrieving and parsing data..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ht0-3J-mYd">
+                                        <rect key="frame" x="0.0" y="269" width="375" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstItem="x78-VC-G80" firstAttribute="centerX" secondItem="fHc-Nl-cAO" secondAttribute="centerX" id="Nhh-24-MvA"/>
+                                    <constraint firstItem="x78-VC-G80" firstAttribute="centerY" secondItem="fHc-Nl-cAO" secondAttribute="centerY" id="YUU-fy-vBM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ht0-3J-mYd" secondAttribute="trailing" id="ZyF-Ld-c6t"/>
+                                    <constraint firstItem="Ht0-3J-mYd" firstAttribute="leading" secondItem="fHc-Nl-cAO" secondAttribute="leading" id="bcB-o6-Kta"/>
+                                    <constraint firstItem="x78-VC-G80" firstAttribute="top" secondItem="Ht0-3J-mYd" secondAttribute="bottom" constant="26" id="mox-Lb-UmG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="dfV-za-f2S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0S7-cD-OLm"/>
                             <constraint firstItem="8MA-ej-PjM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="31G-Jh-9dl"/>
                             <constraint firstItem="dfV-za-f2S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8qk-4b-0cE"/>
+                            <constraint firstAttribute="trailing" secondItem="fHc-Nl-cAO" secondAttribute="trailing" id="AIO-0x-qXJ"/>
                             <constraint firstItem="Prc-9f-1vA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ALq-Ah-WVT"/>
                             <constraint firstItem="Prc-9f-1vA" firstAttribute="top" secondItem="dfV-za-f2S" secondAttribute="bottom" id="Gbe-I2-Vwy"/>
                             <constraint firstItem="8MA-ej-PjM" firstAttribute="top" secondItem="Prc-9f-1vA" secondAttribute="bottom" id="LeU-ws-6XF"/>
                             <constraint firstAttribute="trailing" secondItem="Prc-9f-1vA" secondAttribute="trailing" id="Vz1-bF-67d"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fHc-Nl-cAO" secondAttribute="bottom" id="buL-uy-dYZ"/>
                             <constraint firstAttribute="trailing" secondItem="dfV-za-f2S" secondAttribute="trailing" id="fQk-An-Dib"/>
                             <constraint firstAttribute="trailing" secondItem="8MA-ej-PjM" secondAttribute="trailing" id="g36-lA-F8R"/>
+                            <constraint firstItem="fHc-Nl-cAO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g7F-F2-504"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8MA-ej-PjM" secondAttribute="bottom" id="len-WI-vWy"/>
+                            <constraint firstItem="fHc-Nl-cAO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="n9W-J7-EPO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Llt-ul-8HQ"/>
                     <connections>
                         <outlet property="horizontalScrollView" destination="8MA-ej-PjM" id="ipV-ji-eHr"/>
+                        <outlet property="loadingView" destination="fHc-Nl-cAO" id="VJL-lK-1Uz"/>
                         <outlet property="mapHeightConstraint" destination="DUm-Z3-hzf" id="0Dt-iw-7Sr"/>
                         <outlet property="mapView" destination="dfV-za-f2S" id="SF1-2S-zJ2"/>
                         <outlet property="pageController" destination="7OP-T3-aL4" id="Iu9-yj-Flx"/>
@@ -139,12 +147,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="igT-pY-uXI" kind="relationship" relationship="rootViewController" id="UTz-nl-Uga"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K5J-yG-FbQ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iX-Bh-WcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-330" y="-18"/>
+            <point key="canvasLocation" x="127" y="-18"/>
         </scene>
         <!--Route Details View Controller-->
         <scene sceneID="VdG-zz-77V">
