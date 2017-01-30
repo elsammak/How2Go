@@ -51,9 +51,10 @@ public struct Route {
         }
 
         if time > 60 {
-            route.totalTime = String.init(format: "\(time / 60.0) hour")
+
+            route.totalTime = String.localizedStringWithFormat(NSLocalizedString("route.hours", comment: "%2.1f hour"), (time / 60.0))
         } else {
-            route.totalTime = String.init(format: "\(time) minutes")
+            route.totalTime = String.localizedStringWithFormat(NSLocalizedString("transitline.minutes", comment: "%2.1f minutes"), time)
         }
 
         return route

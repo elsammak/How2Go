@@ -42,14 +42,21 @@ class SegmentNodeCollectionViewCell: UICollectionViewCell {
     // MARK: - Update UI method
     func updateUI() {
         segmentName.text = segment.name
-        numberOfStops.text = String.init(format: "\(segment.numberOfStops) stops")
-        travelMode.text = segment.travelMode.rawValue
+
+        if segment.numberOfStops > 1 {
+            numberOfStops.text = String.localizedStringWithFormat(NSLocalizedString("transitline.stops", comment: "%d stops"), segment.numberOfStops)
+        } else {
+            numberOfStops.text = String.localizedStringWithFormat(NSLocalizedString("transitline.stop", comment: "%d stop"), segment.numberOfStops)
+        }
+
+        travelMode.text = NSLocalizedString(segment.travelMode.rawValue, comment: "Travel mode as string")
 
         DispatchQueue.main.async(execute: {
             self.logoView.loadSVGImage(imageUrl: (self.segment.iconUrl))
         })
         segmentView.backgroundColor = UIColor(hexString: segment.color)
-        timeLabel.text = String.init(format: "\(segment.totalTime) minutes")
+
+        timeLabel.text = String.localizedStringWithFormat(NSLocalizedString("transitline.minutes", comment: "%d minutes"), segment.totalTime)
 
         leftLine.alpha = 1
         rightLine.alpha = 1

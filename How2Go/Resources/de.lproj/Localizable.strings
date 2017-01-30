@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  How2Go
+
+  Created by Mohammed Elsammak on 1/30/17.
+  Copyright © 2017 How2Go. All rights reserved.
+*/
+// These strings were retrieved directly from translate.google.com so they may not be very accurate.
+"loading.title" = "Daten werden abgerufen und analysiert...";
+"transitline.stops" = "%d stoppt";
+"transitline.stop" = "%d stoppen";
+"transitline.minutes" = "%2.1f protokoll";
+"route.hours" = "%2.1 std.";
+"error.title" = "Fehler";
+"error.retry" = "Wiederholen";
+"error.cancel" = "Stornieren";
+"routedetails.segments" = "%d segmente";
+"routedetails.segment" = "%d segment";
+"itunes.alert.title" = "Öffnen iTunes page";
+"itunes.alert.message" = "Sind Sie sicher, dass Sie in itunes öffnen möchten?";
+"itunes.alert.ok" = "Ok";
+"walking" = "Gehen";
+"subway" = "U-Bahn";
+"bus" = "Bus";
+"change" = "wechseln";
+"setup" = "Konfiguration";
+"driving" = "Fahren";
+"parking" = "Parken";
+"cycling" = "Radfahren";

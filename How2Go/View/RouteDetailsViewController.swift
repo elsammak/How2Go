@@ -68,10 +68,20 @@ class RouteDetailsViewController: UIViewController {
         })
 
         if let segmentsCount = currentRoute?.segments.count {
-            segmentsLabel.text = String.init(format: "\(segmentsCount) segments")
+            if segmentsCount > 1 {
+                segmentsLabel.text = String.localizedStringWithFormat(NSLocalizedString("routedetails.segments", comment: "%d segments"), segmentsCount)
+            } else {
+                segmentsLabel.text = String.localizedStringWithFormat(NSLocalizedString("routedetails.segment", comment: "%d segment"), segmentsCount)
+            }
+
         }
         if let stopsCount = currentRoute?.getNumberOfStops() {
-            stopsLabel.text = String.init(format: "\(stopsCount) stops")
+            if stopsCount > 1 {
+            stopsLabel.text =    String.localizedStringWithFormat(NSLocalizedString("transitline.stops", comment: "%d stops"), stopsCount)
+            } else {
+                stopsLabel.text =    String.localizedStringWithFormat(NSLocalizedString("transitline.stop", comment: "%d stop"), stopsCount)
+            }
+
         }
 
         timeLabel.text = currentRoute?.totalTime
@@ -98,15 +108,15 @@ class RouteDetailsViewController: UIViewController {
     }
     @IBAction func logoButtonPressed(_ sender: Any) {
 
-        let alert = UIAlertController(title: "Open itunes page",
-                                      message: "Are your sure you want to open in itunes",
+        let alert = UIAlertController(title: NSLocalizedString("itunes.alert.title", comment: "Open itunes page"),
+                                      message: NSLocalizedString("itunes.alert.message", comment: "Are your sure you want to open in itunes"),
                                       preferredStyle: UIAlertControllerStyle.alert)
 
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { _ in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("itunes.alert.ok", comment: "Ok"), style: UIAlertActionStyle.default, handler: { _ in
             guard let url = URL(string: (self.currentRoute?.provider?.itunesUrl)!) else { return }
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("error.cancel", comment: "Cancel"), style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     // MARK: - Navigation

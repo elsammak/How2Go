@@ -88,13 +88,13 @@ class RouteViewController: UIViewController, RoutesDelegate, MKMapViewDelegate, 
     }
     func updateUIWithError(error: Error) {
 
-        let alert = UIAlertController(title: "Error",
+        let alert = UIAlertController(title: NSLocalizedString("error.title", comment: "Error"),
                                       message: error.localizedDescription,
                                       preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.default, handler: { _ in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("error.retry", comment: "Retry"), style: UIAlertActionStyle.default, handler: { _ in
             self.viewModel.getRouteData()
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("error.cancel", comment: "Cancel"), style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 

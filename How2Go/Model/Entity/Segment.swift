@@ -10,14 +10,14 @@ import Foundation
 
 enum TravelMode: String {
     case unknown = "--"
-    case walking = "Walking"
-    case subway = "Subway"
-    case bus = "Bus"
-    case change = "Change"
-    case setup = "Setup"
-    case driving = "Driving"
-    case parking = "Parking"
-    case cycling = "Cyclying"
+    case walking = "walking"
+    case subway = "subway"
+    case bus = "bus"
+    case change = "change"
+    case setup = "setup"
+    case driving = "driving"
+    case parking = "parking"
+    case cycling = "cyclying"
 }
 struct Segment {
 
