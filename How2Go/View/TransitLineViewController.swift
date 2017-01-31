@@ -93,9 +93,6 @@ class TransitLineViewController: UIViewController, UICollectionViewDelegate, UIC
     // MARK: - UICollectionView Delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        guard elementsArray.count > 1 else {
-            return
-        }
         var segmentIndex = indexPath.row
         if elementsArray[segmentIndex] is Stop {
             segmentIndex = getCurrentExpandedSegmentIndex(currentStopIndex: segmentIndex)
